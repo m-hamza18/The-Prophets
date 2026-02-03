@@ -17,7 +17,7 @@ export function ProgressBar({ completedStories, currentStory }: ProgressBarProps
           {completedStories.length} / {prophets.length} Stories
         </span>
       </div>
-      
+
       {/* Progress Track */}
       <div className="relative h-4 bg-white/20 rounded-full overflow-hidden">
         <motion.div
@@ -41,8 +41,8 @@ export function ProgressBar({ completedStories, currentStory }: ProgressBarProps
               className={`
                 w-10 h-10 rounded-full flex items-center justify-center text-lg
                 transition-all duration-300
-                ${isCompleted 
-                  ? 'bg-emerald-500 text-white shadow-lg shadow-emerald-500/50' 
+                ${isCompleted
+                  ? 'bg-emerald-500 text-white shadow-lg shadow-emerald-500/50'
                   : isCurrent
                     ? 'bg-amber-400 text-amber-900 shadow-lg shadow-amber-400/50 ring-4 ring-amber-400/30'
                     : isLocked
@@ -60,7 +60,7 @@ export function ProgressBar({ completedStories, currentStory }: ProgressBarProps
               }}
               title={prophet.name}
             >
-              {isCompleted ? '✓' : prophet.emoji}
+              {isCompleted ? '✓' : index + 1}
             </motion.div>
           );
         })}

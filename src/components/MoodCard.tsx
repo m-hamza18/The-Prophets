@@ -12,13 +12,13 @@ export function MoodCard({ mood, onClick, index }: MoodCardProps) {
     <motion.button
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ 
-        duration: 0.5, 
+      transition={{
+        duration: 0.5,
         delay: index * 0.1,
         type: "spring",
         stiffness: 100
       }}
-      whileHover={{ 
+      whileHover={{
         scale: 1.08,
         rotate: [0, -2, 2, 0],
         transition: { duration: 0.3 }
@@ -63,7 +63,7 @@ export function MoodCard({ mood, onClick, index }: MoodCardProps) {
       </div>
 
       {/* Glow effect */}
-      <div 
+      <div
         className="absolute -inset-1 bg-gradient-to-r from-white/0 via-white/30 to-white/0 
                    opacity-0 group-hover:opacity-100 transition-opacity duration-500
                    blur-xl"
@@ -71,20 +71,7 @@ export function MoodCard({ mood, onClick, index }: MoodCardProps) {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center text-center">
-        <motion.span 
-          className="text-6xl mb-4 block"
-          initial={{ y: 0 }}
-          animate={{ 
-            y: [0, -5, 0],
-          }}
-          transition={{
-            duration: 2,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        >
-          {mood.emoji}
-        </motion.span>
+        <div className="h-8" />
         <h3 className="text-xl font-bold text-white mb-2 drop-shadow-md">
           {mood.name}
         </h3>
@@ -94,7 +81,7 @@ export function MoodCard({ mood, onClick, index }: MoodCardProps) {
       </div>
 
       {/* Shine effect on hover */}
-      <div 
+      <div
         className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent
                    -translate-x-full group-hover:translate-x-full transition-transform duration-700"
       />

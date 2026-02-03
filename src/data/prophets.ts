@@ -8,13 +8,13 @@ export interface QuizQuestion {
 export interface StorySection {
   text: string;
   imagePrompt: string;
+  image?: string;
 }
 
 export interface ProphetStory {
   id: number;
   name: string;
   arabicName: string;
-  emoji: string;
   color: string;
   bgGradient: string;
   shortDescription: string;
@@ -28,50 +28,49 @@ export const prophets: ProphetStory[] = [
     "id": 1,
     "name": "Prophet Adam (AS)",
     "arabicName": "آدم",
-    "emoji": "🌿",
     "color": "#22C55E",
     "bgGradient": "from-emerald-400 to-green-600",
     "shortDescription": "The first human being and prophet created by Allah from clay",
     "story": [
       {
-        "text": "Long, long ago, before there were any people, animals, or even the Earth as we know it, Allah decided to create something very special - the very first human being! Allah took some clay from the earth and shaped it into the form of a man.",
-        "imagePrompt": "divine hands sculpting human from clay"
+        "text": "Long ago, Allah told the angels: 'I am going to place mankind on Earth.' The angels were curious, but Allah told them, 'I know that which you do not know.' Allah took a handful of dust from all over the world—red, black, white, and yellow—and shaped it into the first man, Adam (AS).",
+        "imagePrompt": "Allah's brilliance shaping a human figure from multicolored clay",
       },
       {
-        "text": "Allah breathed His spirit into this clay figure, and Adam (AS) came to life! Adam was the very first prophet and human being ever created. Allah taught Adam the names of everything - all the animals, plants, and things in the world.",
-        "imagePrompt": "first human in paradise with animals"
+        "text": "After the clay became firm, Allah breathed life into him. Adam (AS) sneezed and said, 'Alhamdulillah' (All praise belongs to Allah). Allah granted him mercy. Then, Allah taught Adam the names of everything in the world so that he would be the most knowledgeable of all creatures.",
+        "imagePrompt": "Prophet Adam (AS) waking up in a beautiful garden, surrounded by animals he can name",
       },
       {
-        "text": "When the angels saw this, they were amazed! Allah told the angels to bow to Adam as a sign of respect, and all of them did except Iblis (Shaytan), who was too proud and refused.",
-        "imagePrompt": "angels bowing, one refusing"
+        "text": "Allah presented the things to the angels and asked their names, but they didn't know. Adam (AS) informed them of the names, showing the wisdom Allah gave him. Allah then commanded the angels to bow to Adam. All did except Iblis, who was proud and said, 'I am better than him. You created me from fire and him from clay.'",
+        "imagePrompt": "Angels bowing to Adam (AS) in sunlight, with one dark figure standing proudly away",
       },
       {
-        "text": "Allah placed Adam in a beautiful garden called Jannah (Paradise). In Jannah, Adam had everything he could ever want - delicious fruits, beautiful flowers, and peaceful rivers flowing with milk and honey.",
-        "imagePrompt": "beautiful paradise garden"
+        "text": "Adam (AS) lived in the beautiful garden of Jannah. One day, he woke up to find a companion near him. It was Hawwa (Eve). When the angels asked her name, Adam said, 'Hawwa,' because she was created from a living thing. They lived happily together, enjoying the fruits of Paradise.",
+        "imagePrompt": "Adam and Hawwa walking through a lush paradise with glowing fruits and crystal rivers",
       },
       {
-        "text": "Allah then created Hawwa (Eve) to be Adam's companion and wife. They lived happily together in Jannah. But Shaytan was jealous and wanted to trick them into disobeying Allah.",
-        "imagePrompt": "couple in paradise garden"
+        "text": "Allah told them: 'Dwell in Paradise and eat freely, but come not near this one tree.' But Shaytan (Iblis) was jealous. He whispered to them: 'Your Lord only forbade this tree so you wouldn't become immortals.' He swore he was a sincere friend to them.",
+        "imagePrompt": "A shadowy figure whispering near a golden tree with mysterious fruits",
       },
       {
-        "text": "Shaytan whispered to Adam and Hawwa and made the forbidden tree look beautiful. They forgot Allah's warning and ate from it. Immediately, they felt sorry and asked Allah to forgive them.",
-        "imagePrompt": "forbidden tree with serpent"
+        "text": "Tempted by Shaytan's lies, they tasted the fruit. Immediately, they felt shame and realized they were naked, so they began to cover themselves with the large leaves of Paradise. Their Lord called out: 'Did I not forbid you that tree?'",
+        "imagePrompt": "Adam and Hawwa covering themselves with large leaves, looking sad and repentant",
       },
       {
-        "text": "Allah, who is the Most Merciful, accepted their apology. He then sent Adam and Hawwa to live on Earth as a test. He promised that if they and their children followed His guidance, they could return to Jannah one day.",
-        "imagePrompt": "Earth from above with divine light"
+        "text": "Instead of being proud like Iblis, Adam and Hawwa immediately asked for forgiveness: 'Our Lord! We have wronged ourselves. If You forgive us not, we shall certainly be losers.' Allah accepted their repentance but sent them to live and work on Earth as a test for all mankind.",
+        "imagePrompt": "Adam and Hawwa descending to a beautiful green Earth under a bright sun",
       },
       {
-        "text": "Adam and Hawwa had many children. Their two sons were named Habil (Abel) and Qabil (Cain). Prophet Adam (AS) lived for almost 1000 years, teaching all his children about Allah. He is the father of all human beings!",
-        "imagePrompt": "family with children in nature"
+        "text": "On Earth, Adam (AS) worked hard, tilling the land. He had children, including twins Habil (Abel) and Qabil (Cain). He taught them to be kind and to always worship Allah alone. Before he died, he promised his children that Allah would always send prophets to guide them.",
+        "imagePrompt": "Prophet Adam (AS) teaching a group of children under a large leafy tree on Earth",
       }
     ],
     "lessons": [
-      "Allah created us with love and care",
-      "We should always listen to Allah's guidance",
-      "When we make mistakes, we should ask Allah for forgiveness",
-      "Shaytan tries to trick us, but we can be strong",
-      "Family is a precious gift from Allah"
+      "Knowledge is a great gift from Allah (He taught Adam the names of all things)",
+      "Pride is a dangerous trap (Iblis's mistake)",
+      "We must always be honest with ourselves and admit when we make mistakes",
+      "Allah is the Most Merciful and always ready to forgive those who ask",
+      "Life on Earth is a journey and a test to show our love for Allah"
     ],
     "quiz": [
       {
@@ -135,37 +134,37 @@ export const prophets: ProphetStory[] = [
     "id": 2,
     "name": "Prophet Idris (AS)",
     "arabicName": "إدريس",
-    "emoji": "📜",
     "color": "#8B5CF6",
     "bgGradient": "from-violet-400 to-purple-600",
     "shortDescription": "The prophet who was raised to heaven and taught writing",
     "story": [
       {
-        "text": "Prophet Idris (AS) was born many generations after Prophet Adam. He was a very wise and pious man who loved to worship Allah. Allah chose him to be a prophet to guide his people back to the right path.",
-        "imagePrompt": "wise man on hill at sunset"
+        "text": "Prophet Idris (AS) was born in Babylon and was the 5th generation after Adam (AS). He was a man of great truth and wisdom. He called people back to the pure religion of his forefathers, teaching them to be just and fair in everything they did.",
+        "imagePrompt": "A wise man standing on a high Babylon balcony, looking out at the city",
       },
       {
-        "text": "Idris (AS) was the first prophet to teach people how to write and read! Before him, people only memorized things. He also taught people about astronomy - how to look at the stars and understand the heavens.",
-        "imagePrompt": "ancient scrolls and star charts"
+        "text": "Allah granted Idris (AS) many 'firsts.' He was the first human to use a pen for writing! He wanted to help people record knowledge so it wouldn't be forgotten. He also taught people about astronomy and how to understand the movements of the stars.",
+        "imagePrompt": "A person delicately writing on a scroll with an ancient reed pen",
       },
       {
-        "text": "Allah blessed Idris with great knowledge. He taught his people to be honest, to help the poor, and to pray regularly. Many people listened to him and became better.",
-        "imagePrompt": "teacher with students learning"
+        "text": "Before Idris (AS), people mostly wore animal skins. He was the first to invent the needle and thread, teaching people how to sew beautiful, clean clothes. He would always remember Allah with every stitch he made.",
+        "imagePrompt": "Close up of ancient needle and thread sewing a clean fabric",
       },
       {
-        "text": "Idris (AS) was also the first prophet to use a needle and thread to sew clothes! Before this, people only wore animal skins. He taught them how to make proper clothes.",
-        "imagePrompt": "hands sewing with needle"
+        "text": "Idris (AS) had many wise sayings. He once said: 'Happy is he who looks at his own deeds and lets them speak for him to his Lord.' He encouraged everyone to share their blessings with those less fortunate.",
+        "imagePrompt": "Idris (AS) sharing food with a group of people in a simple village",
       },
       {
-        "text": "Allah loved Idris so much that He raised him up to the fourth heaven while he was still alive! This was a special honor given only to Idris. He is mentioned in the Quran as being 'raised to a high station.'",
-        "imagePrompt": "figure ascending to heaven"
+        "text": "Allah loved Idris (AS) so much that He 'raised him to a high station.' This means Allah gave him a very special place in Heaven while he was still alive. He is remembered as 'The Truthful Prophet' in the Quran.",
+        "imagePrompt": "A glowing figure ascending into the bright stars and heavens",
       }
     ],
     "lessons": [
-      "Knowledge is a gift from Allah",
-      "We should always seek to learn new things",
-      "Being honest and helpful is important",
-      "Allah rewards those who are close to Him"
+      "Always strive to be honest and truthful in everything you say",
+      "Sharing your knowledge and blessings brings true happiness",
+      "Remembering Allah during your work makes the work a form of worship",
+      "Wisdom is better than owning many things",
+      "Allah honors those who are dedicated to His path"
     ],
     "quiz": [
       {
@@ -218,54 +217,41 @@ export const prophets: ProphetStory[] = [
     "id": 3,
     "name": "Prophet Nuh (AS)",
     "arabicName": "نوح",
-    "emoji": "🚢",
     "color": "#3B82F6",
     "bgGradient": "from-blue-400 to-cyan-600",
     "shortDescription": "Built a great ark to save the believers from the flood",
     "story": [
       {
-        "text": "Long ago, people had forgotten about Allah and started worshipping statues and idols. They made statues of good people who had died and began praying to them instead of Allah.",
-        "imagePrompt": "people worshipping idols"
+        "text": "Many years after Adam (AS), people forgot Allah and started worshipping statues called Wadd, Suwa, and others. Allah chose Nuh (AS), a patient and kind man, to be His messenger. For 950 years, Nuh called his people day and night, in secret and in public, to come back to the worship of Allah.",
+        "imagePrompt": "Nuh (AS) standing before a group of people worshipping tall stone statues",
       },
       {
-        "text": "Allah chose a kind and patient man named Nuh (Noah) to be His prophet. Nuh (AS) called his people day and night, saying, 'O my people! Worship Allah alone!'",
-        "imagePrompt": "prophet calling to people"
+        "text": "Only a few poor and weak people believed him. The rich and powerful laughed at Nuh (AS), saying, 'You are just a man like us! Why should we follow you?' They even put their fingers in their ears when he spoke. Finally, Allah told Nuh: 'No more of your people will believe.'",
+        "imagePrompt": "People mocking Nuh (AS) and putting fingers in their ears in a busy marketplace",
       },
       {
-        "text": "But most people laughed at Nuh (AS). They made fun of him and said, 'Why should we listen to you? You're just a regular person!' Some people even threw trash at him.",
-        "imagePrompt": "people laughing at prophet"
+        "text": "Allah commanded Nuh (AS) to build a massive Ark. He built it far from the sea, and people mocked him even more, asking if the ship would fly through the sand. But Nuh (AS) stayed patient, building the Ark with wood and tools under Allah's guidance.",
+        "imagePrompt": "A giant wooden ship frame being built on a dry, sandy plain under a bright sun",
       },
       {
-        "text": "Nuh (AS) never gave up! He kept teaching for 950 years - that's longer than anyone has ever lived! Even though only a few people believed in him, he stayed patient and kind.",
-        "imagePrompt": "patient prophet despite mockery"
+        "text": "When the oven at Nuh's house began to gush water—a sign from Allah—it was time. Nuh (AS) led pairs of every animal, male and female, into the Ark. The believers also joined. Then, the sky opened with rain like never before, and springs burst forth from the earth.",
+        "imagePrompt": "Pairs of lions, elephants, and birds entering a large wooden ramp into the Ark",
       },
       {
-        "text": "Allah told Nuh (AS) that He would send a great flood to clean the earth. He commanded Nuh to build a huge ship called an Ark. When people saw Nuh building a ship on dry land, they laughed even more!",
-        "imagePrompt": "ark construction on dry land"
+        "text": "As the water rose higher than the mountains, Nuh (AS) saw his son struggling in the waves. He cried out, 'O my son! Embark with us!' But his son refused, thinking a mountain would save him. A great wave came between them, and the son was lost with the disbelievers.",
+        "imagePrompt": "A young man on a high rock while a massive wave crashes over him, Nuh watching sadly",
       },
       {
-        "text": "Allah told Nuh (AS) to take pairs of every animal - two of each kind, male and female - and put them on the Ark. The believers and their families came aboard too.",
-        "imagePrompt": "animals boarding the ark"
-      },
-      {
-        "text": "Then, the sky became dark and rain started falling. It rained and rained for 40 days and 40 nights! Water came from everywhere - from the sky and even from under the ground.",
-        "imagePrompt": "great flood with heavy rain"
-      },
-      {
-        "text": "The Ark floated safely on the water while everything else was washed away. Even Nuh's own son didn't believe him and refused to come on the Ark.",
-        "imagePrompt": "ark floating on vast ocean"
-      },
-      {
-        "text": "After many days, the rain stopped and the water slowly went down. The Ark landed safely on a mountain called Mount Judi. Allah put a beautiful rainbow in the sky as a promise that He would never send such a big flood again!",
-        "imagePrompt": "rainbow after flood"
+        "text": "The Ark sailed safely over the waves for a long time. Finally, Allah commanded the earth to swallow the water and the sky to stop. The Ark landed on Mount Judi. Nuh (AS) and the believers stepped out, thanking Allah for saving them and starting a new life on a cleansed Earth.",
+        "imagePrompt": "The giant Ark resting on a mountain top as the sun breaks through the clouds",
       }
     ],
     "lessons": [
-      "Be patient even when people are mean to you",
-      "Always trust Allah's promises",
-      "Do what Allah says, even if others laugh at you",
-      "Family should listen to each other",
-      "Allah always keeps His promises"
+      "Patience is key (Nuh preached for 950 years without giving up)",
+      "Always trust in Allah's plan, even if others laugh at you",
+      "Even a Prophet cannot guide those who refuse to believe (the story of Nuh's son)",
+      "Allah's mercy follows those who stay true to Him",
+      "We must take care of all of Allah's creatures (the pairs of animals)"
     ],
     "quiz": [
       {
@@ -329,46 +315,45 @@ export const prophets: ProphetStory[] = [
     "id": 4,
     "name": "Prophet Hud (AS)",
     "arabicName": "هود",
-    "emoji": "🏜️",
     "color": "#F59E0B",
     "bgGradient": "from-amber-400 to-orange-500",
     "shortDescription": "Sent to the people of Ad who were very tall and strong",
     "story": [
       {
-        "text": "After the time of Nuh (AS), there was a people called Ad. They were very tall and strong - the strongest people ever! They built beautiful cities with tall towers and palaces in the desert.",
-        "imagePrompt": "ancient desert city with tall people"
+        "text": "After Nuh (AS), the tribe of Ad lived in the windswept hills between Yemen and Oman. They were incredibly tall and strong—the strongest humans ever! They were famous for building tall palaces with lofty towers in their beautiful valley.",
+        "imagePrompt": "Giant, strong people building massive stone towers in a desert landscape",
       },
       {
-        "text": "But the people of Ad became proud and arrogant. They forgot about Allah and started worshipping idols. They thought their strength and buildings made them better than everyone else.",
-        "imagePrompt": "proud people worshipping idols"
+        "text": "But wealth and power made them arrogant. They started worshipping idols and thought nothing could harm them. Allah sent Hud (AS), a noble man from among them, to remind them: 'O my people! Worship Allah! You have no other God but Him.'",
+        "imagePrompt": "A noble man speaking to a group of giants who are looking down at him proudly",
       },
       {
-        "text": "Allah sent Prophet Hud (AS) to guide them back to the right path. Hud was one of their own people. He told them, 'O my people! Worship Allah alone! Don't be proud and arrogant!'",
-        "imagePrompt": "prophet speaking to tall people"
+        "text": "The people of Ad laughed: 'Do you want to be our master? What payment do you want?' Hud (AS) replied, 'I ask no reward for it. My reward is only from Him Who created me. Will you not then understand?' But they remained proud of their strength.",
+        "imagePrompt": "Prophet Hud (AS) preaching while people around him laugh and flex their muscles",
       },
       {
-        "text": "The people laughed at Hud. They said, 'You want us to leave our idols and worship just one God? Our fathers worshipped these idols!' They challenged Hud to bring Allah's punishment if he was telling the truth.",
-        "imagePrompt": "people challenging prophet"
+        "text": "They even doubted life after death, asking, 'Will we be resurrected after turning into dust?' Hud (AS) patiently explained Allah's justice, but they mocked him: 'You are just a man like us! Our gods have made you crazy!'",
+        "imagePrompt": "A large meeting where people are pointing at Hud (AS) and whispering that he is insane",
       },
       {
-        "text": "Hud warned them that Allah's punishment would come if they didn't change. But they refused to listen. They said, 'Where is this punishment you keep talking about?'",
-        "imagePrompt": "prophet warning people"
+        "text": "A great drought came, and the sky sent no rain. Hud warned them: 'Allah is angry. Repent and believe!' Instead, they laughed even more. One day, they saw a dense cloud approaching. They cheered: 'A cloud bringing us rain!' But Hud knew better.",
+        "imagePrompt": "People cheering at a dark cloud forming over the horizon of a dry valley",
       },
       {
-        "text": "Then, one day, a terrible wind came - the worst wind ever! It blew for seven days and eight nights. It was so strong that it lifted the people up and threw them down like dry leaves!",
-        "imagePrompt": "terrible wind destroying city"
+        "text": "Suddenly, the weather became cold and a stinging wind shook everything. For seven nights and eight days, a violent storm raged, throwing people down like hollow palm trunks. Only Hud (AS) and the believers were saved by Allah's mercy.",
+        "imagePrompt": "A fierce sandstorm tearing through a city of towers, with people being lifted by the gale",
       },
       {
-        "text": "Allah saved Hud (AS) and those who believed in him. When the storm ended, the proud people of Ad were gone. Their beautiful cities became empty ruins in the desert.",
-        "imagePrompt": "empty ruins after storm"
+        "text": "The entire region of Ad was reduced to ruins. Hud (AS) and his followers migrated to peace. This story reminds us that even the strongest and richest on earth are nothing without Allah's guidance and mercy.",
+        "imagePrompt": "Quiet desert ruins with the sun setting, showing the end of a proud nation",
       }
     ],
     "lessons": [
-      "Pride and arrogance are dangerous",
-      "Don't think you're better than others",
-      "Always be humble and thank Allah",
-      "Listen to Allah's messengers",
-      "Allah's punishment is real for those who reject Him"
+      "True strength comes from faith, not physical power",
+      "Pride and arrogance lead to destruction",
+      "Always be thankful for the blessings Allah gives you",
+      "The Day of Judgment is certain and is a day of perfect justice",
+      "Being humble allows you to see the truth clearly"
     ],
     "quiz": [
       {
@@ -421,46 +406,41 @@ export const prophets: ProphetStory[] = [
     "id": 5,
     "name": "Prophet Salih (AS)",
     "arabicName": "صالح",
-    "emoji": "🐪",
     "color": "#EC4899",
     "bgGradient": "from-pink-400 to-rose-500",
     "shortDescription": "The prophet who brought a miracle she-camel from a rock",
     "story": [
       {
-        "text": "After the people of Ad, there came a people called Thamud. They lived in rocky mountains and carved beautiful houses out of the stone cliffs. They were skilled builders but they too worshipped idols.",
-        "imagePrompt": "rock carved city in mountains"
+        "text": "After the people of Ad, the tribe of Thamud succeeded them in power and glory. They were also skilled builders, carving massive, beautiful houses directly into the rocky mountain cliffs. However, they soon fell into the same trap of pride and idol worship as the people before them.",
+        "imagePrompt": "A city of beautiful palaces carved out of solid mountain rock, under a clear sky",
       },
       {
-        "text": "Allah sent Prophet Salih (AS) to guide them. Salih was one of their own people and they respected him. He told them to worship only Allah and stop their bad deeds.",
-        "imagePrompt": "prophet speaking to mountain people"
+        "text": "Allah sent Prophet Salih (AS) to them. He was a man of great wisdom and good hope among them. He told them: 'O my people! Worship Allah, you have no other God but Him.' But the people questioned him, asking why he wanted them to leave the gods of their fathers.",
+        "imagePrompt": "Prophet Salih (AS) standing in a town square made of stone, pleading with his people",
       },
       {
-        "text": "The people said, 'Salih, if you are really a prophet, show us a miracle! Make a she-camel come out of that big rock over there!' They thought this was impossible.",
-        "imagePrompt": "people challenging with big rock"
+        "text": "To test him, the leaders of Thamud demanded a miracle: 'Make a unique she-camel issue from that mountain rock!' Salih (AS) took a vow: if Allah granted their request, would they believe? They swore they would. Salih (AS) prayed, and the rock split open, bringing forth a giant, beautiful she-camel.",
+        "imagePrompt": "A massive rock splitting apart to reveal a majestic, glowing she-camel walking out",
       },
       {
-        "text": "Salih prayed to Allah, and something amazing happened! The big rock split open, and a beautiful she-camel came walking out! It was a living, breathing camel - a true miracle from Allah!",
-        "imagePrompt": "camel coming out of split rock"
+        "text": "The she-camel was a sign from Allah. She would drink from the well one day, and the people would take the water the next. She even provided enough milk for the whole city! Salih (AS) warned: 'Touch her not with harm, lest a near torment will seize you.'",
+        "imagePrompt": "The giant she-camel drinking from a stone well while children gather to watch",
       },
       {
-        "text": "Salih told the people, 'This is Allah's she-camel. Let her drink from the well one day, and you drink the next day. Be kind to her.' But some people became jealous of the camel.",
-        "imagePrompt": "camel drinking from well"
+        "text": "But the disbelievers grew jealous. They plotted in secret and hired wicked men to kill the camel. They shot her with arrows and killed her as she came to drink. In their arrogance, they mocked Salih (AS): 'Bring about your threats if you are truly a messenger!'",
+        "imagePrompt": "Wicked men with bows hiding behind rocks as the she-camel approaches the water",
       },
       {
-        "text": "A group of wicked people decided to kill the she-camel. They shot her with arrows and killed her! When Salih heard this, he was very sad and warned them that Allah's punishment would come in three days.",
-        "imagePrompt": "camel being killed with arrows"
-      },
-      {
-        "text": "On the third day, a terrible sound came from the sky - like thunder but louder! The earth shook and everyone who had done wrong fell down dead. Allah saved Salih (AS) and the believers.",
-        "imagePrompt": "earthquake and destruction"
+        "text": "Salih (AS) told them sadly: 'Enjoy your homes for three more days!' Even then, they tried to kill Salih and his family. But Allah protected him. On the third day, a terrific cry came from the sky, and an earthquake destroyed the city. Only the believers who had left with Salih were saved.",
+        "imagePrompt": "A city in ruins after a great storm, with only the mountain homes standing silent",
       }
     ],
     "lessons": [
-      "Don't ask for miracles just to challenge Allah",
-      "Be kind to animals - they are Allah's creatures",
-      "Allah can do anything - even make a camel from a rock",
-      "When Allah gives you a sign, believe in it",
-      "Allah's punishment comes to those who harm His signs"
+      "Allah's miracles are a test of our faith and commitment",
+      "Treating all of Allah's creatures with kindness is a duty",
+      "Arrogance leads to ignoring clear signs of the truth",
+      "Allah's protection is always with the believers during difficult times",
+      "Regret comes too late once the opportunity for repentance has passed"
     ],
     "quiz": [
       {
@@ -513,54 +493,45 @@ export const prophets: ProphetStory[] = [
     "id": 6,
     "name": "Prophet Ibrahim (AS)",
     "arabicName": "إبراهيم",
-    "emoji": "🌟",
     "color": "#F59E0B",
     "bgGradient": "from-amber-400 to-orange-500",
     "shortDescription": "The friend of Allah who broke the idols and built the Kaaba",
     "story": [
       {
-        "text": "Prophet Ibrahim (Abraham) was born in a land where people worshipped many idols and even the stars! His own father made idols for people to worship. But Ibrahim was different - he was always thinking and wondering about the truth.",
-        "imagePrompt": "young boy looking at stars"
+        "text": "Prophet Ibrahim (AS) was born in a family of idol-makers. His father, Azer, even made the statues people worshipped! Ibrahim always wondered: 'How can people worship what they make with their own hands?' He searched for the one true Lord of the universe.",
+        "imagePrompt": "Young Ibrahim (AS) watching his father carve a stone idol with a look of confusion",
       },
       {
-        "text": "When Ibrahim was young, he looked at the beautiful stars and thought, 'Maybe this is my Lord?' But when the stars disappeared, he knew they couldn't be God. Then he saw the bright moon and the sun, but they also set.",
-        "imagePrompt": "celestial bodies fading"
+        "text": "One night, he saw a bright star and said, 'This is my Lord!' But it set. He saw the moon and the sun, but they also disappeared. Ibrahim realized: 'I turn my face to the One Who created the heavens and the earth. I will never worship anything besides Allah!'",
+        "imagePrompt": "Ibrahim (AS) pointing at the night sky while the moon and stars glow brightly",
       },
       {
-        "text": "Ibrahim said, 'I turn my face to the One who created the heavens and the earth. I will never worship anything besides Allah!' He knew there was only One True God who never sets or disappears.",
-        "imagePrompt": "man rejecting idols"
+        "text": "Ibrahim gently told his father: 'O my father! Why worship what cannot hear or see?' But his father was angry and threatened to stone him. Ibrahim replied with peace: 'I will ask my Lord to forgive you, for He is always gracious to me.'",
+        "imagePrompt": "Ibrahim (AS) speaking kindly to his angry father in a room full of statues",
       },
       {
-        "text": "One day, Ibrahim's people left town for a festival. Ibrahim went to the temple where all the idols were kept. He asked them, 'Why don't you eat the food people leave for you?' The idols were silent, of course!",
-        "imagePrompt": "temple with idols"
+        "text": "One day, while the town was at a festival, Ibrahim went to the temple with an axe. He smashed all the idols except the biggest one, hanging the axe on its neck. When the people returned in a rage, Ibrahim said, 'Ask the big idol!' They realized then that their gods were silent and powerless.",
+        "imagePrompt": "A destroyed temple with broken stone pieces and one large idol holding an axe",
       },
       {
-        "text": "Ibrahim had a plan. He took an axe and broke all the idols - except the biggest one. He hung the axe around the big idol's neck. When people returned and saw their broken idols, they were shocked and angry!",
-        "imagePrompt": "broken idols in temple"
+        "text": "The people were so angry they threw Ibrahim (AS) into a massive, blazing fire using a catapult. But Allah commanded: 'O fire! Be you coolness and safety for Ibrahim.' He sat in the middle of the flames as if he were in a beautiful, peaceful garden.",
+        "imagePrompt": "Ibrahim (AS) sitting calmly inside a bright orange fire that looks soft like a field of flowers",
       },
       {
-        "text": "'Who did this?!' they shouted. Ibrahim calmly said, 'Ask the big idol. Maybe he did it!' The people said, 'But idols can't talk!' Ibrahim replied, 'Then why do you worship things that cannot help you?'",
-        "imagePrompt": "confrontation with people"
+        "text": "Later, Ibrahim (AS) and his son Ismail (AS) built the Kaaba in Makkah together. Ibrahim prayed: 'Our Lord! Make us submissive to You and show us our rites of worship.' He is known as 'Khalilullah'—the Friend of Allah.",
+        "imagePrompt": "Ibrahim and a young Ismail (AS) lifting heavy stones to build the base of the Kaaba",
       },
       {
-        "text": "The people became very angry and decided to punish Ibrahim. They built a huge fire and threw Ibrahim into it! But Allah commanded the fire to be cool and safe for Ibrahim. He sat in the fire, comfortable and unharmed!",
-        "imagePrompt": "fire miracle"
-      },
-      {
-        "text": "Allah blessed Ibrahim with a son named Ismail. Later, Allah tested Ibrahim by asking him to sacrifice his son. Both were ready to obey, but Allah sent a ram to sacrifice instead. This is why we celebrate Eid al-Adha!",
-        "imagePrompt": "sacrifice scene with ram"
-      },
-      {
-        "text": "Ibrahim and Ismail built the Kaaba in Makkah together. They asked Allah to bless the city and send a prophet from their family. Allah answered by sending Prophet Muhammad (SAW) many years later!",
-        "imagePrompt": "building the Kaaba"
+        "text": "Allah tested Ibrahim (AS) many times, and he always stayed faithful. From his family came many great prophets, including Prophet Muhammad (ﷺ). Ibrahim's life teaches us that true faith is about trusting Allah more than anything in the world.",
+        "imagePrompt": "A family tree glowing with light, starting with Ibrahim (AS) and going down generations",
       }
     ],
     "lessons": [
-      "Use your mind to think about Allah's signs",
-      "Be brave in standing up for the truth",
-      "Allah protects those who trust in Him",
-      "Obey Allah even when it's difficult",
-      "Always be willing to sacrifice for Allah"
+      "Always use your mind to seek the truth about our Creator",
+      "Be respectful and kind to your parents, even if you disagree",
+      "Courage is standing up for what is right, even when you are alone",
+      "Allah is always there to protect and comfort those who trust Him",
+      "True friendship with Allah comes through complete faith and obedience"
     ],
     "quiz": [
       {
@@ -624,50 +595,45 @@ export const prophets: ProphetStory[] = [
     "id": 7,
     "name": "Prophet Lut (AS)",
     "arabicName": "لوط",
-    "emoji": "🏙️",
     "color": "#6366F1",
     "bgGradient": "from-indigo-400 to-purple-600",
     "shortDescription": "Sent to the people who were doing very bad things",
     "story": [
       {
-        "text": "Prophet Lut (Lot) was the nephew of Prophet Ibrahim (AS). When Ibrahim traveled to different lands, Lut went with him and learned from him. Allah chose Lut to be a prophet to his own people.",
-        "imagePrompt": "two prophets traveling"
+        "text": "Prophet Lut (AS) was the nephew of Ibrahim (AS). He believed in Ibrahim's message early on and traveled with him from Iraq to Egypt, and finally to the land of Sodom near the Dead Sea. Allah chose Lut to be a messenger to the people of that city.",
+        "imagePrompt": "Lut (AS) and Ibrahim (AS) standing together on a desert hill, looking towards a distant city",
       },
       {
-        "text": "Lut (AS) was sent to a city where the people had become very wicked. They were doing terrible things that no one had ever done before. They refused to listen to any advice or guidance.",
-        "imagePrompt": "wicked city"
+        "text": "The people of Sodom were very wicked and did shameful things that no one in the world had ever done before. Lut (AS) warned them: 'Do you commit such immorality as no one has preceded you with from among the worlds?' But they ignored him.",
+        "imagePrompt": "A busy, dark city street with people behaving rudely and ignoring a man speaking to them",
       },
       {
-        "text": "Lut (AS) tried to guide them back to the right path. He told them to worship only Allah and to stop their bad behavior. He reminded them that Allah had created them and given them everything.",
-        "imagePrompt": "prophet warning people"
+        "text": "Lut (AS) was patient for many years, but the people only grew more arrogant. They even threatened to expel him: 'Drive them out of your city! Indeed, they are people who keep themselves pure.' Lut prayed: 'My Lord, support me against the corrupting people.'",
+        "imagePrompt": "Lut (AS) standing alone while a crowd of people points at him and shouts",
       },
       {
-        "text": "But the people mocked Lut and threatened him. They said, 'If you don't stop preaching, you will be thrown out of our city!' Some even said, 'Bring us Allah's punishment if you are truthful!'",
-        "imagePrompt": "people threatening prophet"
+        "text": "Allah sent three beautiful angels in the form of men to Lut's house. Lut was worried because he knew how dangerous his people were to guests. The wicked people soon surrounded his house, demanding he hand over his visitors.",
+        "imagePrompt": "Lut (AS) standing at his doorway, looking worried as a crowd gathers outside his house",
       },
       {
-        "text": "Lut prayed to Allah for help. He said, 'O Allah, save me and my family from what these people are doing!' Allah answered his prayer and sent angels to help him.",
-        "imagePrompt": "prophet praying for help"
+        "text": "Lut (AS) tried to protect them, saying, 'Do not disgrace me concerning my guests!' The angels then revealed their true identity: 'O Lut, indeed we are messengers of your Lord; they will never reach you.' They told him to leave the city with his family during the night.",
+        "imagePrompt": "The three men in Lut’s house glowing with a soft, divine light as Lut looks relieved",
       },
       {
-        "text": "The angels came to Lut's house as handsome travelers. The wicked people surrounded the house and demanded that Lut send out the travelers to them! Lut was very upset and tried to protect his guests.",
-        "imagePrompt": "angels at house"
+        "text": "The angels warned: 'Let not one of you look back!' As Lut (AS) and his daughters fled, a terrible punishment struck the city at sunrise. Allah turned the city upside down and rained down stones of hard clay, marked by your Lord.",
+        "imagePrompt": "Lut and his daughters walking away from a city that is being engulfed in a great storm",
       },
       {
-        "text": "The angels revealed themselves and told Lut, 'We are angels sent by Allah. Take your family and leave this city tonight. Don't look back! Allah's punishment will come at sunrise.'",
-        "imagePrompt": "angels revealing themselves"
-      },
-      {
-        "text": "At sunrise, a terrible punishment came. Allah lifted up the city and flipped it upside down! Then He rained stones of baked clay upon them. Everything was destroyed except Lut and his family who had left.",
-        "imagePrompt": "city destruction"
+        "text": "Lut (AS) reached a place of safety. His story is a reminder that Allah protects the pure of heart and that we should always stand up for what is right, even when everyone else is doing wrong.",
+        "imagePrompt": "Lut (AS) sitting peacefully under a tree in a green valley, looking back at a distant mountain",
       }
     ],
     "lessons": [
-      "Always protect your family from bad influences",
-      "Never do things that Allah has forbidden",
-      "Allah's punishment is severe for those who persist in sin",
-      "Be brave even when standing alone for the truth",
-      "Listen to Allah's messengers and follow their guidance"
+      "Always stand firm in your values, even if those around you are doing wrong",
+      "Honoring and protecting your guests is a great virtue in Islam",
+      "Allah's help is always near for those who keep themselves pure and patient",
+      "Do not look back at things that are bad for you; keep moving toward the light",
+      "Truth and purity will always be saved, while falsehood and wickedness perish"
     ],
     "quiz": [
       {
@@ -720,46 +686,45 @@ export const prophets: ProphetStory[] = [
     "id": 8,
     "name": "Prophet Ismail (AS)",
     "arabicName": "إسماعيل",
-    "emoji": "🕋",
     "color": "#14B8A6",
     "bgGradient": "from-teal-400 to-cyan-500",
     "shortDescription": "The son of Ibrahim who helped build the Kaaba",
     "story": [
       {
-        "text": "Prophet Ismail (Ishmael) was the son of Prophet Ibrahim (AS) and his wife Hajar. When he was just a baby, Allah tested Ibrahim by asking him to leave Hajar and Ismail in the desert valley of Makkah.",
-        "imagePrompt": "mother and baby in desert"
+        "text": "Prophet Ismail (AS) was the first-born son of Ibrahim (AS). When he was just a baby, Allah commanded Ibrahim to take him and his mother, Hajar, to the barren valley of Makkah. Ibrahim left them with only a bag of dates and a skin of water, trusting completely in Allah.",
+        "imagePrompt": "Ibrahim (AS) leaving a young mother and baby in a vast, empty desert valley",
       },
       {
-        "text": "Hajar ran between two hills - Safa and Marwa - seven times, looking for water for her thirsty baby. Allah saw her effort and caused the well of Zamzam to spring up from under baby Ismail's feet!",
-        "imagePrompt": "Zamzam well miracle"
+        "text": "When the water ran out, baby Ismail began to cry. Hajar ran desperately between the hills of Safa and Marwa seven times, searching for help. Suddenly, near the baby, the Angel Jibril struck the earth, and a spring of water gushed out—the well of Zamzam!",
+        "imagePrompt": "Hajar running between two dusty hills while water bubbles up from the sand near the baby",
       },
       {
-        "text": "Ismail grew up to be a strong and righteous young man. He and his father Ibrahim built the Kaaba together as a house for Allah. They lifted heavy stones and placed them carefully.",
-        "imagePrompt": "father and son building Kaaba"
+        "text": "People began to settle around the water, and Makkah became a city. Ismail grew up learning the language of the people and became a skilled archer and horseman. He was known for being truthful and always fulfilling his promises.",
+        "imagePrompt": "A young man skillfully aiming a bow in the desert near a growing village",
       },
       {
-        "text": "While building, they prayed, 'O Allah, accept this from us. Make this a place of peace and safety. Send a messenger from our children to teach the people.' Allah accepted their prayer.",
-        "imagePrompt": "praying while building"
+        "text": "Years later, Ibrahim returned. He said, 'O my son, I have seen in a dream that I must sacrifice you.' Ismail (AS) replied with amazing faith: 'O my father, do what you are commanded. You will find me, if Allah wills, of the steadfast.'",
+        "imagePrompt": "Ibrahim (AS) and Ismail (AS) talking seriously in a peaceful desert setting",
       },
       {
-        "text": "Later, Allah tested Ibrahim again by commanding him to sacrifice his beloved son Ismail. Both father and son were ready to obey Allah completely. Ismail said, 'O my father, do what Allah has commanded!'",
-        "imagePrompt": "sacrifice test"
+        "text": "As they prepared to obey, Shaytan tried to trick them three times, but they threw stones at him to drive him away. Just as Ibrahim was ready, Allah called out: 'O Ibrahim, you have fulfilled the vision!' and sent a ram to be sacrificed instead.",
+        "imagePrompt": "A large ram with beautiful horns appears near Ibrahim, who looks up with joy",
       },
       {
-        "text": "Just as Ibrahim was about to sacrifice his son, Allah sent a big ram to be sacrificed instead. Allah was testing their obedience and faith. They passed the test beautifully!",
-        "imagePrompt": "ram appearing"
+        "text": "Together, Ibrahim and Ismail (AS) built the Kaaba, the first house of worship for Allah. As they raised the walls, they prayed: 'Our Lord, accept this from us. Indeed You are the Hearing, the Knowing.' The footprint of Ibrahim is still there today near the Kaaba.",
+        "imagePrompt": "Ibrahim and Ismail lifting stone blocks together to build the square walls of the Kaaba",
       },
       {
-        "text": "Ismail (AS) became a prophet and taught his people to worship only Allah. His descendants became the Arab people, and from his line came Prophet Muhammad (SAW), the last messenger of Allah!",
-        "imagePrompt": "prophet teaching people"
+        "text": "Ismail (AS) lived in Makkah and taught his children to worship Allah alone. He is the forefather of the Prophet Muhammad (ﷺ), and his story reminds us of the incredible rewards that come from total trust in Allah.",
+        "imagePrompt": "A peaceful overview of the Kaaba with light shining down from the sky",
       }
     ],
     "lessons": [
-      "Obey your parents when they ask you to do good",
-      "Be willing to sacrifice for Allah",
-      "Trust in Allah's plan even when it's difficult",
-      "Hard work and dedication are rewarded by Allah",
-      "Allah tests those He loves to make them stronger"
+      "Total trust in Allah (Tawakkul) brings miracles like the Zamzam well",
+      "Patience and hard work (like Hajar's running) are always rewarded",
+      "Always be truthful and keep your promises, just like Prophet Ismail",
+      "True obedience means being ready to give up what we love for Allah",
+      "Building a legacy of faith (like the Kaaba) benefits people for thousands of years"
     ],
     "quiz": [
       {
@@ -812,38 +777,37 @@ export const prophets: ProphetStory[] = [
     "id": 9,
     "name": "Prophet Ishaq (AS)",
     "arabicName": "إسحاق",
-    "emoji": "👶",
     "color": "#F472B6",
     "bgGradient": "from-pink-400 to-rose-500",
     "shortDescription": "The miraculous son of Ibrahim born to Sarah in old age",
     "story": [
       {
-        "text": "Prophet Ishaq (Isaac) was the second son of Prophet Ibrahim (AS). His mother was Sarah, Ibrahim's first wife. When Allah told Sarah she would have a baby, she was very surprised because she was very old!",
-        "imagePrompt": "elderly couple with angel"
+        "text": "Prophet Ishaq (AS) was the second son of Ibrahim (AS). He was born to Sarah, who was very old and thought she could never have children. When three angels came to Ibrahim with the news, Sarah laughed in wonder, but the angels said, 'Do you wonder at the decree of Allah?'",
+        "imagePrompt": "Three radiant guests speaking to Ibrahim (AS) while Sarah listens from behind a curtain",
       },
       {
-        "text": "Sarah laughed with happiness when she heard the news! She said, 'Shall I really have a baby when I am so old?' The angel said, 'Yes, by Allah's power, you will have a son named Ishaq.'",
-        "imagePrompt": "joyful announcement"
+        "text": "Allah blessed Ibrahim and Sarah with Ishaq (AS) as a gift for their patience. He was named 'Ishaq' which means 'he laughs,' reminding everyone of the joy his birth brought. He grew up under the guidance of his great father, learning the secrets of faith and wisdom.",
+        "imagePrompt": "An elderly couple holding a glowing baby in a simple, peaceful tent",
       },
       {
-        "text": "True to Allah's promise, Sarah became pregnant and gave birth to a beautiful baby boy named Ishaq. Ibrahim was overjoyed to have another son! Both he and Sarah thanked Allah for this miracle.",
-        "imagePrompt": "newborn baby blessing"
+        "text": "Ishaq (AS) became a prophet of great character and truth. He lived in the land of Canaan (Palestine) and continued the message of his father Ibrahim: to worship only Allah. He was known for his kindness and for helping those around him.",
+        "imagePrompt": "A noble man with a kind face teaching a group of people in a green pasture",
       },
       {
-        "text": "Ishaq grew up to be a righteous and wise man, just like his father. Allah chose him to be a prophet to continue his father's mission of teaching people to worship only Allah.",
-        "imagePrompt": "young man learning"
+        "text": "Allah praised Ishaq (AS) in the Quran as a man of 'strength and vision.' He was always mindful of the Hereafter and encouraged his people to do good deeds. He was a link in a golden chain of prophets that would spread light across the world.",
+        "imagePrompt": "Ishaq (AS) standing on a hill at sunrise, looking out with a focused and peaceful gaze",
       },
       {
-        "text": "Ishaq had two sons, Esau (Aisa) and Ya'qub (Jacob). Ya'qub would also become a great prophet. Through Ishaq's line came many prophets, including Musa (Moses) and Isa (Jesus).",
-        "imagePrompt": "family lineage"
+        "text": "Ishaq (AS) had twin sons, Aisu and Yaqub (AS). Before he passed away at a very old age, he blessed them both. From his son Yaqub (AS) came many more prophets, fulfilling Allah's promise to Ibrahim that his line would be blessed with many messengers.",
+        "imagePrompt": "An old man laying his hands on the heads of two young boys to bless them",
       }
     ],
     "lessons": [
-      "Allah can do anything - even the impossible",
-      "Never lose hope in Allah's mercy",
-      "Allah's promises always come true",
-      "Be grateful for Allah's blessings",
-      "Good children are a gift from Allah"
+      "Allah's power makes the impossible possible—never lose hope",
+      "True laughter and joy come from Allah's blessings and mercy",
+      "Strength of character is built through faith and good vision for the future",
+      "Being a link in a good family means continuing the good work of your parents",
+      "Prophethood is a responsibility to guide people with kindness and truth"
     ],
     "quiz": [
       {
@@ -896,38 +860,41 @@ export const prophets: ProphetStory[] = [
     "id": 10,
     "name": "Prophet Ya'qub (AS)",
     "arabicName": "يعقوب",
-    "emoji": "🌈",
     "color": "#A855F7",
     "bgGradient": "from-purple-400 to-violet-600",
     "shortDescription": "Also called Israel, the father of twelve sons who became the twelve tribes",
     "story": [
       {
-        "text": "Prophet Ya'qub (Jacob), also called Israel, was the son of Prophet Ishaq. He was a very righteous man who loved Allah deeply. Allah blessed him with twelve sons who would become the ancestors of the twelve tribes of Israel.",
-        "imagePrompt": "father with twelve sons"
+        "text": "Prophet Yaqub (AS) was the son of Ishaq (AS) and the grandson of Ibrahim (AS). He was a man of great patience and deep faith. He traveled to the land of Haran to stay with his uncle and built a large, blessed family there.",
+        "imagePrompt": "A traveler with a walking stick walking towards a distant green oasis",
       },
       {
-        "text": "Ya'qub had a special love for his son Yusuf (Joseph), who was very handsome and righteous. This made his other sons jealous. They plotted against Yusuf and threw him into a well, then told their father that a wolf had eaten him!",
-        "imagePrompt": "brothers around well"
+        "text": "Allah gave Yaqub (AS) the special name 'Israel,' which means 'the Servant of Allah.' He had twelve sons, who would become the fathers of the twelve tribes. Among them, he loved Yusuf (AS) the most because of his special character and beautiful soul.",
+        "imagePrompt": "Yaqub (AS) sitting with a young, glowing boy (Yusuf) while other sons look on from a distance",
       },
       {
-        "text": "Ya'qub was heartbroken. He cried so much for Yusuf that he lost his eyesight! But he never lost hope in Allah. He said, 'I only complain of my suffering to Allah, and I know from Allah what you do not know.'",
-        "imagePrompt": "grieving father"
+        "text": "When Yusuf's brothers were jealous and threw him into a well, they brought back his shirt covered in fake blood. They told Yaqub a wolf had eaten him. But Yaqub (AS) knew in his heart Yusuf was alive. He said, 'So beautiful patience is most fitting.'",
+        "imagePrompt": "Brothers showing a stained shirt to an old man who covers his face in deep sadness",
       },
       {
-        "text": "Years later, when Yusuf became a great leader in Egypt, he sent for his family. Ya'qub and all his sons traveled to Egypt and were reunited. Ya'qub's eyesight was restored when he smelled Yusuf's shirt!",
-        "imagePrompt": "family reunion"
+        "text": "For many years, Yaqub (AS) mourned for Yusuf. He cried until his eyes became white and he lost his sight. Even when others told him to forget, he said, 'I only complain of my grief and sorrow to Allah, and I know from Allah that which you know not.'",
+        "imagePrompt": "An elderly man sitting alone in a tent, looking up towards the light with pale eyes",
       },
       {
-        "text": "Before Ya'qub passed away, he gathered all his sons and reminded them to worship only Allah and to stay together as believers. He was buried next to his father Ishaq and grandfather Ibrahim in Hebron.",
-        "imagePrompt": "father giving advice"
+        "text": "Finally, Allah rewarded his 'beautiful patience.' Yusuf (AS) became a high minister in Egypt and sent his shirt to his father. When the shirt was placed on Yaqub's face, his sight was miraculously restored! He traveled to Egypt with his whole family for a joyful reunion.",
+        "imagePrompt": "A family reunion in a grand Egyptian palace, with everyone hugging and weeping with joy",
+      },
+      {
+        "text": "Before he passed away, Yaqub (AS) asked his sons: 'What will you worship after me?' They all replied: 'We will worship your God and the God of your fathers—the One True God.' He left this world knowing his children would stay on the right path.",
+        "imagePrompt": "An old man on his deathbed holding the hands of his twelve sons as they all pray together",
       }
     ],
     "lessons": [
-      "Never lose hope, even in the darkest times",
-      "Allah can reunite separated families",
-      "Jealousy is a dangerous sin",
-      "Trust in Allah's plan",
-      "Keep family ties strong"
+      "Patience isn't just waiting—it's waiting with a good heart ('Beautiful Patience')",
+      "Always complain of your sorrows to Allah first, for He is the only one who can help",
+      "Never lose hope in Allah's mercy, even when things look impossible for a long time",
+      "True love for children means teaching them to worship Allah more than anything else",
+      "Faith and family are the most important things to leave behind in this world"
     ],
     "quiz": [
       {
@@ -980,58 +947,41 @@ export const prophets: ProphetStory[] = [
     "id": 11,
     "name": "Prophet Yusuf (AS)",
     "arabicName": "يوسف",
-    "emoji": "👑",
     "color": "#EAB308",
     "bgGradient": "from-yellow-400 to-amber-500",
     "shortDescription": "The beautiful prophet who became a king in Egypt",
     "story": [
       {
-        "text": "Prophet Yusuf (Joseph) was the son of Prophet Ya'qub. He was extremely handsome and Allah gave him the ability to interpret dreams. When he was young, he dreamed that eleven stars, the sun, and the moon were bowing to him!",
-        "imagePrompt": "young man dreaming of stars bowing"
+        "text": "Prophet Yusuf (AS) was the favorite son of Yaqub (AS). He was incredibly beautiful, both in his face and his heart. One night, he dreamed that eleven stars, the sun, and the moon were all bowing down to him. His father told him: 'O my son, do not relate your vision to your brothers, lest they plot against you.'",
+        "imagePrompt": "A young, radiant boy telling his father about a dream of celestial bodies bowing",
       },
       {
-        "text": "His brothers were already jealous of him because their father loved him most. When Yusuf told them his dream, they became even more jealous. They plotted to get rid of him.",
-        "imagePrompt": "jealous brothers plotting"
+        "text": "But the older brothers were jealous. They took Yusuf to the desert, stripped his beautiful shirt, and threw him into a dark, deep well. They brought the shirt back to their father, stained with fake blood, crying that a wolf had eaten him. Yusuf (AS), meanwhile, was found by travelers and sold into slavery in Egypt.",
+        "imagePrompt": "A young boy at the bottom of a dark well looking up at a small circle of light",
       },
       {
-        "text": "The brothers took Yusuf to the desert and threw him into a deep well. Then they sold him as a slave to some travelers who were going to Egypt. They told their father that a wolf had eaten Yusuf.",
-        "imagePrompt": "brothers lowering into well"
+        "text": "In Egypt, Yusuf (AS) grew up in the house of a powerful minister. He was tested with great temptations, but he chose to stay pure and loyal to Allah, even when it meant being sent to prison for many years. He told himself: 'My Lord is better to me than what they call me to.'",
+        "imagePrompt": "A noble-looking young man standing tall and firm in a simple, dark prison cell",
       },
       {
-        "text": "In Egypt, Yusuf was bought by a rich man named Al-Aziz. Yusuf grew up to be very handsome and righteous. Al-Aziz's wife, Zulaikha, tried to trick Yusuf into doing bad things, but Yusuf refused!",
-        "imagePrompt": "handsome young servant refusing temptation"
+        "text": "While in prison, Yusuf (AS) became famous for interpreting dreams. Years later, the King of Egypt had a strange dream of seven fat cows being eaten by seven thin ones. Yusuf explained it meant seven years of plenty followed by seven years of terrible famine. The King was so impressed he made Yusuf the Minister of Grain.",
+        "imagePrompt": "Yusuf (AS) standing before a grand King in a golden palace, explaining a vision",
       },
       {
-        "text": "When Yusuf refused, Zulaikha lied and got him thrown into prison! But even in prison, Yusuf stayed patient and continued to worship Allah. He became known for interpreting dreams correctly.",
-        "imagePrompt": "prison but staying patient"
+        "text": "During the famine, Yusuf's brothers came to Egypt to beg for food. They didn't recognize the powerful man before them. Yusuf (AS) tested them and eventually revealed himself: 'I am Yusuf, and this is my brother. Allah has indeed been gracious to us.' He forgave them completely for what they had done.",
+        "imagePrompt": "Brothers bowing low before a powerful man in Egyptian robes who is smiling kindly",
       },
       {
-        "text": "The King of Egypt had a strange dream that no one could interpret. He dreamed about seven fat cows being eaten by seven thin cows, and seven green stalks of grain and seven dry ones.",
-        "imagePrompt": "king's strange dream"
-      },
-      {
-        "text": "Yusuf was brought from prison to interpret the dream. He said, 'There will be seven years of plenty followed by seven years of famine. Store grain during the good years!' The King was amazed by his wisdom.",
-        "imagePrompt": "interpreting dream for king"
-      },
-      {
-        "text": "The King made Yusuf the Minister of Egypt, giving him great power and authority! Yusuf managed the grain storage so well that Egypt had food when the famine came, while other lands starved.",
-        "imagePrompt": "minister of Egypt"
-      },
-      {
-        "text": "During the famine, Yusuf's brothers came to Egypt to buy food. They didn't recognize Yusuf, but he recognized them! After testing them to see if they had changed, Yusuf revealed himself and forgave them.",
-        "imagePrompt": "brothers bowing to Yusuf"
-      },
-      {
-        "text": "Yusuf brought his whole family to Egypt to live with him. He said to his brothers, 'There is no blame on you today. May Allah forgive you.' Yusuf's story teaches us about patience, forgiveness, and trusting Allah's plan!",
-        "imagePrompt": "family reunion in palace"
+        "text": "Yusuf (AS) sent for his father, Yaqub (AS). When they met, Yusuf lifted his parents onto the throne, and they all fell down in prostration. Yusuf said: 'O my father, this is the explanation of my vision of old. My Lord has made it come true.' It was the most beautiful reunion in history.",
+        "imagePrompt": "A magnificent throne room where an old man and a powerful son are embracing in tears",
       }
     ],
     "lessons": [
-      "Be patient even in the worst situations",
-      "Always stay righteous no matter what",
-      "Forgiveness is a sign of strength",
-      "Allah's plan is perfect even when we don't understand",
-      "Good character will always be rewarded"
+      "Jealousy can blind people, but Allah's plan is always greater than any plot",
+      "Patience (Sabr) and sticking to your values will eventually lead to success",
+      "Forgiving those who hurt you is the character of a truly great person",
+      "Allah's help comes in ways we least expect—from a well to a palace",
+      "Always maintain hope and trust in Allah, even in the darkest prison or deepest well"
     ],
     "quiz": [
       {
@@ -1095,50 +1045,37 @@ export const prophets: ProphetStory[] = [
     "id": 12,
     "name": "Prophet Ayyub (AS)",
     "arabicName": "أيوب",
-    "emoji": "💚",
     "color": "#22C55E",
     "bgGradient": "from-green-400 to-emerald-600",
     "shortDescription": "The prophet of patience who never complained despite severe trials",
     "story": [
       {
-        "text": "Prophet Ayyub (Job) was a very wealthy and righteous man. Allah had blessed him with many animals, fertile land, and a loving family. He was grateful to Allah for all these blessings and always worshipped Him.",
-        "imagePrompt": "wealthy man with blessings"
+        "text": "Prophet Ayyub (AS) was a very wealthy and righteous man who lived in the land of Hawran. Allah gave him everything: hundreds of animals, beautiful gardens, and many sons and daughters. He was always grateful and used his wealth to help the poor and needy.",
+        "imagePrompt": "A noble man standing in a lush green garden with many sheep and camels grazing",
       },
       {
-        "text": "Shaytan was jealous of Ayyub's devotion to Allah. He asked Allah for permission to test Ayyub. Allah allowed this test to show how patient and faithful Ayyub truly was.",
-        "imagePrompt": "test being permitted"
+        "text": "To test his faith, Allah allowed Ayyub (AS) to lose everything. One by one, his children passed away, his animals were lost, and his gardens dried up. Then, he was struck with a severe illness that lasted for many years. Only his faithful wife stayed by his side to serve him.",
+        "imagePrompt": "An elderly man sitting in a simple tent, looking weak but peaceful, with his wife nearby",
       },
       {
-        "text": "One by one, all of Ayyub's blessings were taken away. His animals died, his crops were destroyed, and his children were lost. But Ayyub remained patient and said, 'Surely, to Allah we belong and to Him we shall return.'",
-        "imagePrompt": "losing everything but staying patient"
+        "text": "For eighteen long years, Ayyub (AS) stayed patient. He never complained to people or asked 'Why me?' Even when his friends began to doubt him, he only turned to Allah. He said: 'Indeed, adversity has touched me, and You are the Most Merciful of the merciful.'",
+        "imagePrompt": "A silhouette of a man praying under a large, dark sky full of stars",
       },
       {
-        "text": "Then Ayyub became very sick with a terrible disease. His skin became covered in sores, and he suffered great pain. Even his wife and friends began to doubt, but Ayyub never complained about Allah.",
-        "imagePrompt": "sick but never complaining"
+        "text": "Allah was pleased with Ayyub's beautiful patience. He commanded: 'Strike the ground with your foot!' When Ayyub did, a spring of cool water gushed out. Allah said: 'This is a cool bath and a drink.' After washing and drinking, Ayyub (AS) was miraculously healed!",
+        "imagePrompt": "A spring of crystal clear water splashing up from a golden desert floor",
       },
       {
-        "text": "Ayyub's friends came to visit him, but instead of comforting him, they said he must have done something wrong to deserve this! Ayyub defended his innocence and said he had always been faithful to Allah.",
-        "imagePrompt": "friends accusing him"
-      },
-      {
-        "text": "Despite all his suffering, Ayyub never lost faith. He prayed to Allah, 'Indeed, adversity has touched me, and You are the Most Merciful of the merciful.' This simple prayer showed his complete trust in Allah.",
-        "imagePrompt": "praying in suffering"
-      },
-      {
-        "text": "Allah answered Ayyub's prayer! He told Ayyub to stamp his foot on the ground, and a spring of cool water gushed out. Ayyub washed in this water and was completely healed by Allah's mercy!",
-        "imagePrompt": "miraculous healing"
-      },
-      {
-        "text": "Not only was Ayyub healed, but Allah restored all his blessings and gave him even more! He had new children, new wealth, and lived a long happy life. His story teaches us that patience is always rewarded!",
-        "imagePrompt": "restored blessings"
+        "text": "Allah not only healed Ayyub (AS) but also brought back his family and doubled his wealth as a reward for his patience. He became healthy and strong again, and lived a long, happy life. Allah says in the Quran: 'Truly! We found him patient. How excellent a slave!'",
+        "imagePrompt": "A joyful man surrounded by his family and many healthy animals under a bright sun",
       }
     ],
     "lessons": [
-      "Patience during hardship is a great virtue",
-      "Never complain about Allah's tests",
-      "Allah tests those He loves",
-      "Allah's mercy is greater than any hardship",
-      "Stay grateful in good times and bad"
+      "True patience (Sabr) means trusting Allah even when life gets very difficult",
+      "Allah's mercy is always greater than any hardship we face",
+      "We should be grateful for our health and wealth while we have them",
+      "Never complain to others about your troubles; turn only to Allah in prayer",
+      "Those who stay steadfast during tests are given great rewards in this life and the next"
     ],
     "quiz": [
       {
@@ -1189,68 +1126,86 @@ export const prophets: ProphetStory[] = [
   },
   {
     "id": 13,
-    "name": "Prophet Dhul-Kifl (AS)",
-    "arabicName": "ذو الكفل",
-    "emoji": "⚖️",
-    "color": "#64748B",
-    "bgGradient": "from-slate-400 to-gray-600",
-    "shortDescription": "Known for keeping his promises and being just",
+    "name": "Prophet Shu’ayb (AS)",
+    "arabicName": "شعيب",
+    "color": "#10B981",
+    "bgGradient": "from-emerald-400 to-teal-500",
+    "shortDescription": "The prophet sent to Madyan who taught honesty in trade",
     "story": [
       {
-        "text": "Prophet Dhul-Kifl was sent to guide his people to worship Allah alone. His name means 'the one with responsibility' because he was known for always keeping his promises and fulfilling his duties.",
-        "imagePrompt": "wise leader keeping promises"
+        "text": "Prophet Shu’ayb (AS) was sent to the people of Madyan, who lived in a land of tall trees and lush gardens. They were skilled traders, but they had a very bad habit: they were dishonest in business. They would use 'heavy' weights when buying things and 'light' ones when selling, cheating people out of their money.",
+        "imagePrompt": "A busy marketplace where a man is using uneven stone weights to measure grain",
       },
       {
-        "text": "Dhul-Kifl was known for his fairness and justice. When people had disputes, they would come to him because they knew he would judge fairly according to Allah's guidance.",
-        "imagePrompt": "judge with scales of justice"
+        "text": "Shu’ayb (AS) was known as 'The Preacher of the Prophets' because he spoke so clearly and beautifully. He warned them: 'O my people! Give full measure and weight with justice and do not decrease the people's things.' He reminded them that honest wealth is better than a mountain of stolen gold.",
+        "imagePrompt": "Prophet Shu’ayb (AS) speaking with great passion to a crowd in a dusty market square",
       },
       {
-        "text": "He taught his people to be patient in hardship and to always speak the truth. He reminded them that Allah is always watching and that we will all be accountable for our actions.",
-        "imagePrompt": "teaching patience and truth"
+        "text": "The people of Madyan were proud. They mocked him, saying: 'Does your prayer command you that we should leave what our fathers worshipped or that we should stop doing what we like with our own wealth?' They thought their money belonged only to them and they could do whatever they wanted.",
+        "imagePrompt": "Wealthy merchants in fine robes laughing and gesturing at Shu’ayb (AS)",
       },
       {
-        "text": "Dhul-Kifl's people were tested with various trials, but he guided them to remain steadfast. He showed them that keeping faith in Allah during difficult times brings great rewards.",
-        "imagePrompt": "community staying strong"
+        "text": "Shu’ayb (AS) warned them of the punishment that destroyed the people of Nuh, Hud, and Salih. But the disbelievers grew angry and threatened to expel him. They even tried to block the paths to prevent people from listening to him. Shu’ayb prayed: 'Our Lord, decide between us and our people in truth.'",
+        "imagePrompt": "Men standing on a high path, blocking the way for others as Shu’ayb stands far away",
+      },
+      {
+        "text": "First, a scorching heat wave struck Madyan for seven days, and no water could cool them. Then, they saw a giant dark cloud and ran to its shade for relief. Suddenly, a terrifying blast—the 'Saih'-shook the earth, and fire rained down from the cloud. The cities of the dishonest became silent ruins.",
+        "imagePrompt": "A massive dark cloud over a city with bright flashes of light and falling sparks",
+      },
+      {
+        "text": "Allah saved Shu’ayb (AS) and those who believed. They moved to another land and lived in peace. Shu’ayb's story is a powerful reminder that being honest and fair in our work and school is a way to earn Allah's love and protection.",
+        "imagePrompt": "A small group of people walking towards a peaceful green mountain as the sun rises",
       }
     ],
     "lessons": [
-      "Always keep your promises",
-      "Be fair and just in all your dealings",
-      "Patience brings rewards from Allah",
-      "Speak the truth always",
-      "Fulfill your responsibilities"
+      "Honesty in business and everyday life is an act of worship",
+      "Gaining small things through cheating leads to great loss in the end",
+      "Using your voice to speak the truth (like Shu’ayb) is a noble character trait",
+      "True wealth is what satisfies the heart and earns Allah's pleasure",
+      "Allah's justice eventually catches up with those who consistently hurt others"
     ],
     "quiz": [
       {
         "id": 1,
-        "question": "What does Dhul-Kifl mean?",
+        "question": "Which people was Prophet Shu’ayb (AS) sent to?",
         "options": [
-          "The wise one",
-          "The one with responsibility",
-          "The strong one",
-          "The rich one"
+          "People of Ad",
+          "People of Thamud",
+          "People of Madyan",
+          "People of Israel"
         ],
-        "correctAnswer": 1
+        "correctAnswer": 2
       },
       {
         "id": 2,
-        "question": "What was Dhul-Kifl known for?",
+        "question": "What was the main bad habit of the people of Madyan?",
         "options": [
-          "His wealth",
-          "Keeping promises and being just",
-          "His strength",
-          "His speed"
+          "They were lazy",
+          "They were dishonest in trade",
+          "They didn't like animals",
+          "They wouldn't build houses"
         ],
         "correctAnswer": 1
       },
       {
         "id": 3,
-        "question": "What did Dhul-Kifl teach his people?",
+        "question": "What was Shu’ayb (AS) often called because he spoke so well?",
         "options": [
-          "To fight",
-          "To be patient and truthful",
-          "To be rich",
-          "To travel"
+          "The Teacher",
+          "The Preacher of the Prophets",
+          "The Wise King",
+          "The Strong Leader"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "id": 4,
+        "question": "What did Shu’ayb tell people to do with weights and measures?",
+        "options": [
+          "Throw them away",
+          "Give full measure and weight",
+          "Make them smaller",
+          "Hide them"
         ],
         "correctAnswer": 1
       }
@@ -1258,156 +1213,43 @@ export const prophets: ProphetStory[] = [
   },
   {
     "id": 14,
-    "name": "Prophet Yunus (AS)",
-    "arabicName": "يونس",
-    "emoji": "🐋",
-    "color": "#0EA5E9",
-    "bgGradient": "from-sky-400 to-blue-600",
-    "shortDescription": "The prophet who was swallowed by a giant fish",
-    "story": [
-      {
-        "text": "Prophet Yunus (Jonah) was sent to the people of Nineveh. He called them to worship Allah, but they refused to listen. Yunus became frustrated and left without Allah's permission.",
-        "imagePrompt": "prophet leaving city frustrated"
-      },
-      {
-        "text": "He boarded a ship, but a terrible storm came. The sailors drew lots, and Yunus was chosen to leave. He jumped into the sea, and a giant fish swallowed him.",
-        "imagePrompt": "giant fish swallowing"
-      },
-      {
-        "text": "Inside the fish's belly, in complete darkness, Yunus realized his mistake. He called out to Allah with a very special prayer: 'There is no god but You. Glory be to You. Indeed, I have been of the wrongdoers.'",
-        "imagePrompt": "praying in darkness"
-      },
-      {
-        "text": "Allah heard Yunus's prayer and forgave him! The fish swam to the shore and spit Yunus out onto the beach. Yunus was weak but alive, and his skin had become smooth and shiny!",
-        "imagePrompt": "fish spitting onto beach"
-      },
-      {
-        "text": "Allah caused a gourd vine to grow over Yunus to give him shade. After he recovered, Yunus returned to his people. This time, they all listened to him and believed!",
-        "imagePrompt": "returning to people who now listen"
-      }
-    ],
-    "lessons": [
-      "Never give up on calling people to Allah",
-      "Always ask Allah for forgiveness",
-      "Allah's mercy is greater than any mistake",
-      "Be patient even when things are difficult",
-      "Allah can save us from any situation"
-    ],
-    "quiz": [
-      {
-        "id": 1,
-        "question": "Which city was Yunus sent to?",
-        "options": [
-          "Makkah",
-          "Nineveh",
-          "Madinah",
-          "Jerusalem"
-        ],
-        "correctAnswer": 1
-      },
-      {
-        "id": 2,
-        "question": "What swallowed Yunus?",
-        "options": [
-          "A shark",
-          "A giant fish",
-          "A whale",
-          "A dragon"
-        ],
-        "correctAnswer": 1
-      },
-      {
-        "id": 3,
-        "question": "What did Yunus pray inside the fish?",
-        "options": [
-          "'Get me out!'",
-          "'There is no god but You'",
-          "'Help!'",
-          "'Why me?'"
-        ],
-        "correctAnswer": 1
-      },
-      {
-        "id": 4,
-        "question": "What grew to shade Yunus on the beach?",
-        "options": [
-          "A tree",
-          "A gourd vine",
-          "Flowers",
-          "Grass"
-        ],
-        "correctAnswer": 1
-      }
-    ]
-  },
-  {
-    "id": 15,
     "name": "Prophet Musa (AS)",
     "arabicName": "موسى",
-    "emoji": "🌊",
     "color": "#8B5CF6",
     "bgGradient": "from-violet-400 to-purple-600",
     "shortDescription": "Spoke directly to Allah and parted the Red Sea",
     "story": [
       {
-        "text": "Long ago in Egypt, there was a cruel king called Pharaoh who said he was a god! He made the Israelites his slaves and was very cruel to them. Allah decided to send a prophet to free them.",
-        "imagePrompt": "cruel pharaoh with slaves"
+        "text": "Prophet Musa (AS) was born in Egypt during a time of great fear. The cruel King Pharaoh had ordered all baby boys to be killed. To save him, Musa's mother put him in a basket and let him float down the Nile River, while his sister watched from the tall grass. The basket was found by Pharaoh’s own family!",
+        "imagePrompt": "A simple basket floating on a wide river with tall green plants on the banks",
       },
       {
-        "text": "Allah chose Musa (Moses). When Musa was a baby, Pharaoh ordered all Israelite baby boys to be killed! Musa's mother put him in a basket in the Nile River. The basket floated to Pharaoh's palace!",
-        "imagePrompt": "baby in basket to palace"
+        "text": "Pharaoh’s wife, Asiya, found the baby and loved him immediately. She said to Pharaoh: 'A comfort of the eye for me and for you. Do not kill him!' Musa (AS) grew up as a prince in the palace, but he always knew he was one of the Children of Israel. After an accident, he had to flee to Madyan, where he lived many years as a shepherd.",
+        "imagePrompt": "A grand palace balcony where a kind queen is holding a baby as she looks at a king",
       },
       {
-        "text": "Pharaoh's wife, Queen Asiya, found the baby and wanted to keep him. She was a kind believer in Allah. Musa's sister suggested a nurse - and brought their own mother! So Musa's mother raised him in the palace!",
-        "imagePrompt": "queen finding baby"
+        "text": "While traveling with his family, Musa (AS) saw a fire on Mount Sinai. When he went closer, Allah spoke to him: 'O Musa, indeed I am your Lord! So take off your sandals. You are in the holy valley of Tuwa.' Allah gave him a great mission: 'Go to Pharaoh, for he has indeed transgressed.'",
+        "imagePrompt": "A man standing before a glowing bush that is on fire but not burning up",
       },
       {
-        "text": "When Musa grew up, he saw an Egyptian hurting an Israelite. Musa tried to help and accidentally hurt the Egyptian. He had to flee Egypt and traveled to Madyan.",
-        "imagePrompt": "fleeing to Madyan"
+        "text": "Musa (AS) was given miracles—his staff turned into a real snake, and his hand glowed with a white light. He and his brother Harun went to Pharaoh and said: 'Let the Children of Israel go free!' Pharaoh refused and challenged them with his magicians, but Musa's snake swallowed all their magic!",
+        "imagePrompt": "A large yellow snake in a grand hall, with many small ropes on the floor around it",
       },
       {
-        "text": "In Madyan, Musa helped some shepherd girls and married one of them. While traveling with his family, he saw a fire on a mountain. He went closer and found it was no ordinary fire!",
-        "imagePrompt": "fire on mountain"
+        "text": "Allah sent many signs to Pharaoh, but he was too proud to listen. Finally, Musa (AS) led his people away in the middle of the night. Pharaoh chased them with his army until they were trapped at the Red Sea. Musa (AS) struck the water with his staff, and the sea split into two massive walls of water, making a path through the middle!",
+        "imagePrompt": "A man holding a wooden staff over a massive blue sea that has split in half",
       },
       {
-        "text": "Allah spoke directly to Musa from a burning bush! 'I am your Lord. Take off your shoes. You are in the holy valley.' Musa was amazed. Allah gave him a mission: 'Go to Pharaoh and free my people!'",
-        "imagePrompt": "burning bush revelation"
-      },
-      {
-        "text": "Allah gave Musa miracles - his staff could turn into a snake, and his hand could glow! Musa and his brother Haroon went to Pharaoh and said, 'Let the Israelites go free!'",
-        "imagePrompt": "staff becoming snake"
-      },
-      {
-        "text": "Pharaoh called his magicians to compete. Their ropes looked like snakes, but Musa's staff became a huge snake that ate their tricks! The magicians fell down and believed in Allah immediately!",
-        "imagePrompt": "snake eating magic"
-      },
-      {
-        "text": "Pharaoh still refused! Allah sent many signs - the Nile turned to blood, locusts came, frogs covered the land. But Pharaoh's heart was hard. Finally, Allah told Musa to take his people and leave quickly!",
-        "imagePrompt": "plagues in Egypt"
-      },
-      {
-        "text": "Pharaoh chased them with his army. Musa and the Israelites reached the Red Sea - nowhere to go! Musa trusted Allah and struck the sea with his staff. The sea split into two walls with dry land between!",
-        "imagePrompt": "sea splitting miracle"
-      },
-      {
-        "text": "The Israelites crossed safely. When Pharaoh's army followed, the water crashed down and drowned them all! Allah saved Musa and his people from the cruel tyrant.",
-        "imagePrompt": "army drowning"
-      },
-      {
-        "text": "Later, Allah invited Musa to Mount Sinai to speak with Him directly. Musa wanted to see Allah, but Allah said, 'Look at the mountain.' When Allah showed a tiny bit of His glory, the mountain crumbled to dust!",
-        "imagePrompt": "mountain crumbling"
-      },
-      {
-        "text": "Allah gave Musa the Ten Commandments and the Torah on stone tablets. Musa was the only prophet who spoke directly to Allah. What an honor! He is one of the five greatest prophets in Islam.",
-        "imagePrompt": "stone tablets with commandments"
+        "text": "After the Israelites crossed safely, the sea crashed down on Pharaoh and his army. Later, Musa (AS) was called to speak with Allah for forty nights on Mount Sinai. He was given the Torah on stone tablets. He is the 'Kalimullah'—the one who spoke directly to Allah!",
+        "imagePrompt": "Two heavy stone tablets with ancient letters glowing underwater or in the dark",
       }
     ],
     "lessons": [
-      "Allah protects those who trust in Him",
-      "Never be proud like Pharaoh",
-      "Allah can make the impossible possible",
-      "Be brave even when facing powerful enemies",
-      "Allah's power is greater than any magic"
+      "No matter how powerful a tyrant is, Allah is more powerful",
+      "True leadership means serving your people and standing up for justice",
+      "When we feel trapped, remembering Allah's power (like the Red Sea) gives us hope",
+      "Speaking the truth to power is the greatest form of courage",
+      "Allah's words and guidance (the Torah) are a light for believers"
     ],
     "quiz": [
       {
@@ -1468,45 +1310,40 @@ export const prophets: ProphetStory[] = [
     ]
   },
   {
-    "id": 16,
-    "name": "Prophet Haroon (AS)",
+    "id": 15,
+    "name": "Prophet Harun (AS)",
     "arabicName": "هارون",
-    "emoji": "🗣️",
     "color": "#EC4899",
     "bgGradient": "from-pink-400 to-rose-500",
     "shortDescription": "The brother of Musa who helped him speak to Pharaoh",
     "story": [
       {
-        "text": "Prophet Haroon (Aaron) was the older brother of Prophet Musa. He was a very good speaker, while Musa sometimes had difficulty speaking clearly. Allah chose Haroon to help Musa with his mission.",
-        "imagePrompt": "two brothers together"
+        "text": "Prophet Harun (AS) was the elder brother of Musa (AS). He was a man of great wisdom and was blessed by Allah with the gift of beautiful, clear speech. When Musa (AS) was given the mission to face Pharaoh, he prayed to Allah: 'And appoint for me a helper from my family—Harun, my brother. Increase through him my strength.'",
+        "imagePrompt": "Two brothers standing together in prayer, one with a staff and the other looking wise and calm",
       },
       {
-        "text": "When Allah spoke to Musa at the burning bush, He commanded Musa to take Haroon with him to Pharaoh. Allah said, 'We will strengthen your arm through your brother, and give you both power.'",
-        "imagePrompt": "divine command at burning bush"
+        "text": "Harun (AS) was a pillar of support for Musa (AS). He stood by him in the grand palace of Pharaoh, helping to speak the words of truth when Musa’s tongue felt heavy. Together, they showed Pharaoh the clear signs of Allah and called him to free the Children of Israel from slavery.",
+        "imagePrompt": "Two noble men standing tall in a golden palace, speaking to a king on a throne",
       },
       {
-        "text": "Haroon stood by Musa's side when they faced Pharaoh. He helped Musa explain Allah's message clearly. Pharaoh was amazed by their courage and the miracles they showed.",
-        "imagePrompt": "brothers before pharaoh"
+        "text": "While Musa (AS) was away on Mount Sinai for forty nights, he left Harun (AS) in charge. He told him: 'Take my place among my people, do right, and do not follow the way of the corrupters.' Harun (AS) worked hard to keep the people on the right path while waiting for his brother's return.",
+        "imagePrompt": "A man with a kind face talking to a large group of people in a desert camp",
       },
       {
-        "text": "When Musa went to Mount Sinai to speak with Allah, he left Haroon in charge of the Israelites. Unfortunately, some people made a golden calf to worship while Musa was away.",
-        "imagePrompt": "golden calf worship"
+        "text": "When a man named Samiri tricked the people into worshipping a golden calf, Harun (AS) tried his best to stop them. He said: 'O my people, you are only being tested by it, and indeed, your Lord is the Most Merciful, so follow me and obey my order.' He showed great patience even when the people turned against him.",
+        "imagePrompt": "A man pointing away from a golden statue while people around him are looking at it",
       },
       {
-        "text": "Haroon tried to stop them, but they wouldn't listen. When Musa returned and was angry, Haroon explained that he had tried his best to stop them. Musa understood and prayed for forgiveness for both of them.",
-        "imagePrompt": "explanation and forgiveness"
-      },
-      {
-        "text": "Haroon remained a faithful prophet and helper to Musa throughout their mission. He supported his brother and helped guide the Israelites to the Promised Land.",
-        "imagePrompt": "guiding people together"
+        "text": "Harun (AS) passed away shortly before Musa (AS) during their time in the wilderness. He was loved by all for his gentle heart and his ability to make peace between people. He is remembered as a prophet who used his beautiful speech to guide others toward the light.",
+        "imagePrompt": "A peaceful sunset over a mountain range in the desert",
       }
     ],
     "lessons": [
-      "Support your family in doing good",
-      "Use your talents to help others",
-      "Teamwork makes difficult tasks easier",
-      "Stay faithful even when others make mistakes",
-      "Communication is important in leadership"
+      "Using your talents (like clear speech) to help others is a form of worship",
+      "Brotherhood and family support make even the hardest missions possible",
+      "Patience and gentleness are key when trying to correct others' mistakes",
+      "A true leader stays firm in his values even when the crowd goes the wrong way",
+      "Allah rewards those who help his messengers and stand by the truth"
     ],
     "quiz": [
       {
@@ -1545,49 +1382,116 @@ export const prophets: ProphetStory[] = [
     ]
   },
   {
+    "id": 16,
+    "name": "Prophet Dhul-Kifl (AS)",
+    "arabicName": "ذو الكفل",
+    "color": "#64748B",
+    "bgGradient": "from-slate-400 to-gray-600",
+    "shortDescription": "Known for keeping his promises and being just",
+    "story": [
+      {
+        "text": "Prophet Dhul-Kifl (AS) was a man of extraordinary character who lived in the land of the Children of Israel. His name means 'The Possessor of the Fold' or 'One of Double Recompense.' He was famous for his amazing promise-keeping and his ability to remain patient under any pressure.",
+        "imagePrompt": "A wise-looking man sitting on a simple wooden chair, looking calm and focused",
+      },
+      {
+        "text": "Before he became a prophet, the leader of his people wanted to find a successor who could handle two big responsibilities: fasting during the day and praying during the night. Dhul-Kifl was the only one who consistently fulfilled these duties, never missing a single day or night.",
+        "imagePrompt": "A silhouette of a man in prayer under a crescent moon near a quiet village",
+      },
+      {
+        "text": "Ibn Kathir mentions that Dhul-Kifl (AS) used to judge between his people with total justice. He never grew angry or impatient, even when people brought him very difficult problems. He would say: 'I have taken it upon myself to be patient for the sake of Allah.'",
+        "imagePrompt": "A man listening carefully to two people who are talking to him in a courtyard",
+      },
+      {
+        "text": "Shaytan tried many times to make Dhul-Kifl (AS) lose his temper by sending people to annoy him at times when he should have been resting. But every time, Dhul-Kifl greeted them with a smile and a kind heart, proving that his patience was truly for Allah alone.",
+        "imagePrompt": "A man smiling kindly at a group of busy people while the sun sets behind him",
+      },
+      {
+        "text": "Allah praised Dhul-Kifl in the Quran alongside Prophet Ismail and Idris, saying they were all 'from the patient ones.' His life teaches us that being a person of your word and controlling your anger are among the highest forms of worship.",
+        "imagePrompt": "A peaceful landscape with a warm, golden light shining through the clouds",
+      }
+    ],
+    "lessons": [
+      "Keeping your word is a sign of true faith and strength",
+      "Controlling your anger is more important than winning an argument",
+      "Consistency in good deeds (like daily prayer) is what makes a person great",
+      "Being just and fair to everyone, even when you are tired, is a noble trait",
+      "Patience for the sake of Allah brings peace to the heart and a high rank in the Hereafter"
+    ],
+    "quiz": [
+      {
+        "id": 1,
+        "question": "What does Dhul-Kifl mean?",
+        "options": [
+          "The wise one",
+          "The one with responsibility",
+          "The strong one",
+          "The rich one"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "id": 2,
+        "question": "What was Dhul-Kifl known for?",
+        "options": [
+          "His wealth",
+          "Keeping promises and being just",
+          "His strength",
+          "His speed"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "id": 3,
+        "question": "What did Dhul-Kifl teach his people?",
+        "options": [
+          "To fight",
+          "To be patient and truthful",
+          "To be rich",
+          "To travel"
+        ],
+        "correctAnswer": 1
+      }
+    ]
+  },
+  {
     "id": 17,
     "name": "Prophet Dawud (AS)",
     "arabicName": "داود",
-    "emoji": "🎵",
     "color": "#84CC16",
     "bgGradient": "from-lime-400 to-green-500",
     "shortDescription": "The prophet king who could soften iron and received the Psalms",
     "story": [
       {
-        "text": "Prophet Dawud (David) was a righteous young man who lived in the land of Israel. He was a shepherd who took care of his father's sheep. Allah loved him for his sincerity and devotion.",
-        "imagePrompt": "young shepherd with sheep"
+        "text": "Prophet Dawud (AS) was a young man from the Children of Israel who had amazing faith. When a giant, terrifying warrior named Jalut (Goliath) challenged the Israelites to a duel, everyone was afraid except Dawud. He said: 'O my people, I will fight him!' With just a simple slingshot and three smooth stones, and with Allah's help, he defeated the giant and saved his people.",
+        "imagePrompt": "A young man with a simple slingshot standing before a massive warrior in heavy armor",
       },
       {
-        "text": "One day, the Israelites were challenged by a giant warrior named Jalut (Goliath). No one dared to fight him. Dawud, though young and small, believed in Allah's power and volunteered.",
-        "imagePrompt": "small vs giant"
+        "text": "Allah rewarded Dawud (AS) by making him both a king and a prophet. He was given a miracle: Allah made iron as soft as wax for him! He didn't need a furnace or a hammer; he could shape it with his bare hands to make strong but light coats of armor. Allah told him: 'Make full coats of mail and calculate precisely the links.'",
+        "imagePrompt": "A man's hands molding a piece of dark, glowing metal as if it were soft clay",
       },
       {
-        "text": "Dawud picked up his slingshot and five smooth stones. He prayed to Allah for help and flung a stone at Jalut. The stone hit Jalut's forehead, and the giant fell down defeated!",
-        "imagePrompt": "slingshot victory"
+        "text": "Dawud (AS) had a beautiful, powerful voice that no one could match. When he recited the Zabur (Psalms)—the holy book Allah gave him—even the birds would stop in the air and the mountains would join him in praising Allah. They would all echo his beautiful songs of worship together.",
+        "imagePrompt": "A man standing on a mountain peak with birds circling around him in a golden sunset",
       },
       {
-        "text": "Allah made Dawud a king after this victory. But Dawud was not just a warrior - Allah gave him the ability to soften iron with his hands! He would make beautiful armor and weapons.",
-        "imagePrompt": "softening iron"
+        "text": "Dawud (AS) was a very hardworking prophet. Even though he was a king, he never ate from the state's money. Instead, he worked with his own hands making armor and used that money to feed his family. He also fasted every other day, which is known as the 'Fast of Dawud.'",
+        "imagePrompt": "A king in a simple workshop, carefully linking small rings of metal together",
       },
       {
-        "text": "Allah also gave Dawud the Zabur (Psalms), a beautiful book of songs and prayers. Dawud had a wonderful voice and would sing the praises of Allah. When he sang, even the mountains and birds would join him!",
-        "imagePrompt": "singing with nature"
+        "text": "One day, two men climbed over the wall of his private prayer room to ask for a judgment. They were actually angels sent to test him. Dawud realized he had been hasty in his judgment, so he immediately fell into prostration and asked for Allah's forgiveness. Allah forgave him and praised his deep devotion.",
+        "imagePrompt": "A man bowing low on a prayer rug in a room with a high stone wall and a window",
       },
       {
-        "text": "Dawud was a just king who judged fairly between people. He would listen to both sides of any argument before making a decision. His kingdom was peaceful and prosperous.",
-        "imagePrompt": "just king judging"
-      },
-      {
-        "text": "Dawud was known for his fasting and prayer. He would spend a lot of time worshipping Allah. He taught his people to be grateful for Allah's blessings and to always seek forgiveness.",
-        "imagePrompt": "king in prayer"
+        "text": "Dawud (AS) ruled with justice for many years. He passed away peacefully, and it is said that tens of thousands of people attended his funeral. He left behind a legacy of strength, beautiful worship, and his son Sulayman (AS), who would become another great prophet-king.",
+        "imagePrompt": "A peaceful landscape with a large, ancient city in the distance under a starry sky",
       }
     ],
     "lessons": [
-      "Trust in Allah even against big challenges",
-      "Use your special gifts to serve Allah",
-      "Be a just and fair leader",
-      "Music and singing can be forms of worship",
-      "Stay humble even when you achieve great things"
+      "Faith in Allah is more powerful than any giant or physical strength",
+      "Using your hands to work and earn your own food is a noble and blessed act",
+      "Even the most powerful leaders must be humble and seek Allah's forgiveness",
+      "True worship involves the heart, the voice, and even the nature around us",
+      "Justice should be shown to everyone, no matter how they come to you"
     ],
     "quiz": [
       {
@@ -1640,58 +1544,45 @@ export const prophets: ProphetStory[] = [
     "id": 18,
     "name": "Prophet Sulayman (AS)",
     "arabicName": "سليمان",
-    "emoji": "👑",
     "color": "#EAB308",
     "bgGradient": "from-yellow-400 to-amber-500",
     "shortDescription": "The prophet king who could speak to animals and control the jinn",
     "story": [
       {
-        "text": "Prophet Sulayman (Solomon) was the son of Prophet Dawud. He became king after his father and Allah gave him amazing powers! He could understand the language of birds and animals, and he could control the jinn.",
-        "imagePrompt": "king with animals and jinn"
+        "text": "Prophet Sulayman (AS) inherited both the kingdom and the prophethood from his father, Dawud (AS). Allah gave him a kingdom more magnificent than any other, with power over the wind, the jinn, and even the ability to speak the language of all animals!",
+        "imagePrompt": "A magnificent king on a throne, with lions on the steps and birds flying above",
       },
       {
-        "text": "Once, Sulayman was reviewing his army of jinn, birds, and humans. He noticed the hoopoe bird was missing. Soon, the hoopoe returned with amazing news about a queen named Bilqis in the land of Saba (Sheba).",
-        "imagePrompt": "hoopoe bringing news"
+        "text": "One day, while marching with his massive army, Sulayman (AS) heard a tiny voice. It was an ant warning its colony: 'O ants, enter your dwellings lest Sulayman and his hosts crush you while they perceive not.' Sulayman (AS) smiled in wonder and thanked Allah for the gift of hearing even the smallest creatures.",
+        "imagePrompt": "A large army stopping as a king leans down to look at a small crack in the ground",
       },
       {
-        "text": "The hoopoe told Sulayman that Bilqis and her people worshipped the sun instead of Allah! Sulayman decided to invite her to submit to Allah. He sent the hoopoe with a letter.",
-        "imagePrompt": "bird carrying letter"
+        "text": "Sulayman (AS) had an army of birds, and one day he noticed the Hoopoe was missing. When the bird returned, it brought news of the Kingdom of Saba (Sheba), where a Queen named Bilqis ruled. The Hoopoe told him that they were very wealthy but worshipped the sun instead of Allah.",
+        "imagePrompt": "A bright, colorful bird with a crown of feathers talking to a man on a throne",
       },
       {
-        "text": "Queen Bilqis was wise. She consulted her advisors and decided to visit Sulayman to learn more. She brought many gifts and traveled with a great caravan.",
-        "imagePrompt": "queen with caravan"
+        "text": "Sulayman sent a letter to Queen Bilqis, inviting her to Islam. She tried to send him expensive gifts, but Sulayman (AS) refused, saying: 'What Allah has given me is better than what He has given you.' He wanted only for them to find the truth, not their gold or gems.",
+        "imagePrompt": "A queen looking at a small scroll with a royal seal, surrounded by gold chests",
       },
       {
-        "text": "Sulayman wanted to show her Allah's power. He asked his jinn servants, 'Who can bring me her throne before she arrives?' A powerful jinn said, 'I can bring it before you rise from your seat!'",
-        "imagePrompt": "jinn competing"
+        "text": "When the Queen decided to visit him, Sulayman (AS) wanted to show her the power given to him by Allah. He asked: 'Which of you can bring me her throne?' A powerful jinn offered to bring it, but a man with knowledge of the Book brought it in the blink of an eye! When she arrived and saw her throne, she was amazed.",
+        "imagePrompt": "A massive, jewel-encrusted throne suddenly appearing in a grand hall",
       },
       {
-        "text": "But one who had knowledge from Allah's Book said, 'I can bring it in the blink of an eye!' And suddenly, the throne appeared before Sulayman! He had it slightly changed to test if Bilqis would recognize it.",
-        "imagePrompt": "throne appearing instantly"
+        "text": "Sulayman (AS) had built a palace with a floor made of crystal glass over flowing water. Queen Bilqis thought it was deep water and lifted her skirt to walk through, until Sulayman (AS) explained it was just glass. Realizing she was in the presence of a truly blessed Prophet, she said: 'My Lord, I have wronged myself, and I submit with Sulayman to Allah, Lord of the worlds.'",
+        "imagePrompt": "A woman cautiously stepping on a floor that looks like shimmering blue water",
       },
       {
-        "text": "When Bilqis arrived, she was amazed to see her own throne there! She realized Sulayman's kingdom was truly blessed by Allah. Sulayman showed her even more miracles.",
-        "imagePrompt": "queen amazed"
-      },
-      {
-        "text": "Sulayman had a palace with a glass floor that looked like water! When Bilqis saw it, she lifted her dress thinking it was water. Sulayman smiled and said, 'This is just glass.'",
-        "imagePrompt": "glass floor palace"
-      },
-      {
-        "text": "Queen Bilqis was convinced. She said, 'I submit with Sulayman to Allah, the Lord of all worlds.' She became a believer and her people followed her. Sulayman's wisdom had guided them to the truth!",
-        "imagePrompt": "queen submitting"
-      },
-      {
-        "text": "Sulayman ruled with justice and wisdom. He built great structures and ships. He taught his people to worship Allah alone. He is remembered as one of the greatest kings in history.",
-        "imagePrompt": "great kingdom"
+        "text": "Sulayman (AS) used his power to build the magnificent Masjid Al-Aqsa. He even passed away while standing in prayer, leaning on his staff. The jinn continued to work for a long time, not knowing he had passed, until a tiny creature of the earth ate through his staff and he fell. This showed that only Allah knows the unseen.",
+        "imagePrompt": "An old king leaning on a staff in a grand, unfinished temple",
       }
     ],
     "lessons": [
-      "Use your abilities to guide people to Allah",
-      "Wisdom is better than strength",
-      "Be just and fair to everyone",
-      "Knowledge is a gift from Allah",
-      "Leadership is a responsibility"
+      "True power comes from Allah, and we must use it with humility and gratitude",
+      "Even the smallest creature (like an ant) has value and should be respected",
+      "Wisdom and knowledge are better than all the gold and gifts in the world",
+      "A great leader always checks on everyone, even a small bird (the Hoopoe)",
+      "Only Allah knows the unseen (Ghaib); even powerful jinn are limited in knowledge"
     ],
     "quiz": [
       {
@@ -1755,42 +1646,37 @@ export const prophets: ProphetStory[] = [
     "id": 19,
     "name": "Prophet Ilyas (AS)",
     "arabicName": "إلياس",
-    "emoji": "🔥",
     "color": "#DC2626",
     "bgGradient": "from-red-400 to-rose-600",
     "shortDescription": "The prophet who called people to worship only Allah in Baalbek",
     "story": [
       {
-        "text": "Prophet Ilyas (Elijah) was sent to the people of Baalbek, a city where people worshipped a false god named Baal. They had forgotten about Allah and were doing many bad things.",
-        "imagePrompt": "people worshipping false god"
+        "text": "Prophet Ilyas (AS) was sent to the people of Baalbek in modern-day Lebanon. They had turned away from Allah and were worshipping a giant golden statue called 'Baal.' Ilyas (AS) stood before them and asked: 'Will you call upon Baal and forsake the Best of Creators—Allah, your Lord and the Lord of your forefathers?'",
+        "imagePrompt": "A man standing before a massive, shining golden statue in a crowded city square",
       },
       {
-        "text": "Ilyas called the people to worship only Allah. He told them that Baal was just a statue that couldn't hear or help them. He challenged the priests of Baal to a contest on a mountain.",
-        "imagePrompt": "prophet challenging priests"
+        "text": "The people and their king grew angry and tried to harm Ilyas (AS). He had to flee and hide in a cave for several years, where Allah provided for him. During this time, a great drought struck the land, and the people began to suffer because their false god, Baal, could not bring even a single drop of rain.",
+        "imagePrompt": "A man sitting in a rocky cave looking out at a dry, cracked desert landscape",
       },
       {
-        "text": "The priests of Baal prayed and danced around their altar all day, but nothing happened. They even cut themselves with knives, but Baal did not answer because Baal was not real.",
-        "imagePrompt": "priests praying to nothing"
+        "text": "Ilyas (AS) returned to the people and told them that the rain would only come if they returned to the worship of Allah. He showed them that Baal was nothing but a piece of gold that could not hear or speak. Eventually, some people realized their mistake and turned back to the truth.",
+        "imagePrompt": "Gray clouds gathering over a dusty city as people look up in hope",
       },
       {
-        "text": "Then Ilyas prepared his altar. He even poured water on it to make it harder! He prayed to Allah, and immediately fire came down from the sky and burned everything - the sacrifice, the wood, the stones, and even the water!",
-        "imagePrompt": "fire from heaven"
+        "text": "Ibn Kathir mentions that Ilyas (AS) was a man of great strength and intensity in his faith. He traveled across the land, teaching people that Allah is the only One who deserves to be worshipped and that statues have no power to help or harm anyone.",
+        "imagePrompt": "A man with a walking stick traveling along a high mountain ridge",
       },
       {
-        "text": "The people fell down and said, 'Allah is the true God!' But soon they forgot again and went back to their old ways. Ilyas was very sad that people kept forgetting Allah's signs.",
-        "imagePrompt": "people forgetting again"
-      },
-      {
-        "text": "Allah raised Ilyas up to heaven while he was still alive, in a whirlwind of fire! He will return before the Day of Judgment to help defeat the false messiah (Dajjal).",
-        "imagePrompt": "ascending in fire"
+        "text": "Allah praised Ilyas (AS) in the Quran, saying: 'Peace be upon Ilyasin! Indeed, thus do We reward the doers of good.' He left a legacy of courage and stayed firm in his message until the very end, passing his mission to his student, Al-Yasa (AS).",
+        "imagePrompt": "A peaceful mountain village under a clear blue sky",
       }
     ],
     "lessons": [
-      "False gods have no power",
-      "Allah's power is shown through miracles",
-      "Don't keep forgetting Allah's signs",
-      "Stay firm even when others waver",
-      "True faith requires consistency"
+      "No matter how many people follow a wrong path, stay firm on the truth",
+      "False gods and idols have no power; only Allah can provide rain and food",
+      "Patience during times of hiding and hardship is a trait of the prophets",
+      "Always call people to the 'Best of Creators' with wisdom and courage",
+      "Allah's peace and rewards are for those who do good and stay faithful"
     ],
     "quiz": [
       {
@@ -1830,40 +1716,39 @@ export const prophets: ProphetStory[] = [
   },
   {
     "id": 20,
-    "name": "Prophet Alyasa (AS)",
+    "name": "Prophet Al-Yasa (AS)",
     "arabicName": "اليسع",
-    "emoji": "💫",
     "color": "#8B5CF6",
     "bgGradient": "from-violet-400 to-purple-600",
     "shortDescription": "The successor of Ilyas who continued his mission",
     "story": [
       {
-        "text": "Prophet Alyasa (Elisha) was the successor of Prophet Ilyas. When Ilyas was taken up to heaven, his cloak fell to Alyasa, and Allah gave him the same prophetic mission to guide the people.",
-        "imagePrompt": "cloak falling from heaven"
+        "text": "Prophet Al-Yasa (AS) was the cousin and student of Prophet Ilyas (AS). He grew up watching the courage of his teacher and was chosen by Allah to continue the mission of guiding the Children of Israel after Ilyas (AS) passed away.",
+        "imagePrompt": "A younger man walking beside an older man, both carrying walking sticks",
       },
       {
-        "text": "Alyasa continued calling the people of Israel to worship only Allah. He performed miracles to show Allah's power and mercy. He could heal the sick and help people in need.",
-        "imagePrompt": "healing the sick"
+        "text": "Al-Yasa (AS) was blessed with many miracles. In the city of Jericho, the water had become bitter and the land was dying. Al-Yasa (AS) threw some salt into the spring and prayed to Allah, and the water immediately became sweet and healthy for everyone to drink.",
+        "imagePrompt": "A man standing by a small spring, with people happily filling their jars with water",
       },
       {
-        "text": "Once, some poor people came to Alyasa saying they had nothing to pay their debts except a small pot of oil. Alyasa told them to borrow many empty pots from their neighbors.",
-        "imagePrompt": "poor family with oil pot"
+        "text": "He also helped a poor widow whose sons were about to be taken as slaves because of a debt. He told her to pour her last bit of oil into as many jars as she could find. Miraculously, the oil kept flowing until every jar was full, and she was able to pay the debt.",
+        "imagePrompt": "A woman pouring oil from a small pot into a much larger jar, with many jars around her",
       },
       {
-        "text": "Alyasa told them to pour their little oil into all the borrowed pots. Miraculously, the oil kept flowing until every pot was full! They could sell the oil and pay their debts, and still have plenty left!",
-        "imagePrompt": "oil filling many pots"
+        "text": "Al-Yasa (AS) was known for his extreme kindness to the poor and for being a true leader who lived a simple life. He traveled through various cities, reminding people that Allah provides for those who trust Him and work hard.",
+        "imagePrompt": "A man sitting on a simple wooden bench, sharing food with a group of people",
       },
       {
-        "text": "Alyasa taught his people to be kind to the poor and to trust in Allah's provision. He showed them that Allah can provide from sources they never expected.",
-        "imagePrompt": "teaching kindness"
+        "text": "Allah mentions Al-Yasa (AS) twice in the Quran, placing him among the best of mankind. He says: 'And remember Ismail, Al-Yasa, and Dhul-Kifl, and all are among the best.' His story shows that being a good student and a kind helper leads to great honor from Allah.",
+        "imagePrompt": "A warm, golden light shining over a peaceful green valley with a river",
       }
     ],
     "lessons": [
-      "Continue the good work of those before you",
-      "Help those in need",
-      "Trust in Allah's provision",
-      "Small things can become big blessings",
-      "Community should support each other"
+      "Being a dedicated student is the first step to becoming a great leader",
+      "Allah can turn bitterness into sweetness (like the spring) if we have faith",
+      "Trusting in Allah's provision (like the oil miracle) brings blessings to the home",
+      "Kindness to the poor and helping those in debt is a prophetic character trait",
+      "Continuing the good work started by our teachers and parents is very important"
     ],
     "quiz": [
       {
@@ -1905,38 +1790,37 @@ export const prophets: ProphetStory[] = [
     "id": 21,
     "name": "Prophet Yunus (AS)",
     "arabicName": "يونس",
-    "emoji": "🐋",
     "color": "#0EA5E9",
     "bgGradient": "from-sky-400 to-blue-600",
-    "shortDescription": "The prophet who was swallowed by a giant fish and forgave his people",
+    "shortDescription": "The prophet who was swallowed by a giant fish",
     "story": [
       {
-        "text": "Prophet Yunus (Jonah) was sent to the people of Nineveh. He called them to worship Allah, but they refused to listen. Yunus became frustrated and left without Allah's permission.",
-        "imagePrompt": "prophet leaving frustrated"
+        "text": "Prophet Yunus (AS) was sent to the city of Nineveh, where more than a hundred thousand people lived. After years of calling them to Allah, they still refused to believe. Yunus (AS) grew frustrated and decided to leave the city without waiting for Allah's command, thinking he had done his duty.",
+        "imagePrompt": "A man with a bag and a walking stick leaving a large, walled city as its people look on",
       },
       {
-        "text": "He boarded a ship, but a terrible storm came. The sailors drew lots, and Yunus was chosen to leave. He jumped into the sea, and a giant fish swallowed him.",
-        "imagePrompt": "giant fish swallowing"
+        "text": "Yunus (AS) boarded a crowded ship to sail across the sea. Suddenly, a massive storm broke out, and the ship was about to sink! The sailors thought someone on board was 'cursed' and drew lots to see who should leave. Three times, the name of Yunus (AS) came up. Realizing it was Allah's will, Yunus (AS) threw himself into the dark sea.",
+        "imagePrompt": "A man standing at the edge of a rocking ship in a dark storm with massive waves",
       },
       {
-        "text": "Inside the fish's belly, in complete darkness, Yunus realized his mistake. He prayed sincerely: 'There is no god but You. Glory be to You. Indeed, I have been of the wrongdoers.'",
-        "imagePrompt": "praying in darkness"
+        "text": "Immediately, Allah commanded a giant fish to swallow Yunus (AS) but not to harm him. Inside the fish's belly, it was dark and cramped. Yunus (AS) heard the creatures of the deep praising Allah! He realized he should have stayed at his post and prayed: 'There is no god but You; exalted are You. Indeed, I have been of the wrongdoers.'",
+        "imagePrompt": "A man in a dark, cave-like space, praying with focused intensity",
       },
       {
-        "text": "Allah forgave him! The fish swam to the shore and spit Yunus out onto the beach. Yunus was weak but alive, and his skin had become smooth and shiny from the fish's stomach juices!",
-        "imagePrompt": "fish spitting onto beach"
+        "text": "Allah heard his sincere prayer and commanded the fish to spit him out onto a sandy beach. Yunus (AS) was very weak and his skin was thin from the fish's stomach. Allah caused a gourd vine to grow over him, providing cool shade and food until he became healthy and strong again.",
+        "imagePrompt": "A man lying peacefully on a beach under a large vine with green leaves and fruit",
       },
       {
-        "text": "Allah caused a gourd vine to grow over Yunus to give him shade. After he recovered, Yunus returned to his people. This time, they all listened to him and believed! Allah forgave them too.",
-        "imagePrompt": "people now believing"
+        "text": "When Yunus (AS) returned to Nineveh, he was amazed to see that all the people had realized their mistake and were now worshipping only Allah! It was one of the few times an entire city was saved from a punishment. Allah is truly the Most Forgiving and Merciful.",
+        "imagePrompt": "A happy group of people in a city square, with light shining down from the clouds",
       }
     ],
     "lessons": [
-      "Never give up on calling people to Allah",
-      "Always ask Allah for forgiveness",
-      "Allah's mercy is greater than any mistake",
-      "Forgive others when they repent",
-      "Allah can save us from any situation"
+      "Never give up on your duties, even when they seem too difficult",
+      "Allah's mercy can reach you in the darkest places (like the fish's belly)",
+      "Admitting your mistakes and praying sincerely (Dua of Yunus) is the key to forgiveness",
+      "Allah always provides for those who return to Him (like the gourd vine)",
+      "Patience and returning to your mission can lead to massive success"
     ],
     "quiz": [
       {
@@ -1976,44 +1860,39 @@ export const prophets: ProphetStory[] = [
   },
   {
     "id": 22,
-    "name": "Prophet Zakariya (AS)",
+    "name": "Prophet Zakariyah (AS)",
     "arabicName": "زكريا",
-    "emoji": "🙏",
     "color": "#10B981",
     "bgGradient": "from-emerald-400 to-teal-500",
     "shortDescription": "The prophet who was blessed with a son in old age",
     "story": [
       {
-        "text": "Prophet Zakariya (Zechariah) was a righteous priest who served in the temple. He took care of Maryam, the mother of Isa, and taught her about Allah.",
-        "imagePrompt": "priest teaching Maryam"
+        "text": "Prophet Zakariyah (AS) was a wise and elderly priest who served in the Sacred House in Jerusalem. He was a man of great devotion and was chosen to take care of Maryam (AS). Every time he visited her, he found her with fresh food and fruits that were not in season. When he asked where they came from, she said: 'It is from Allah. Indeed, Allah provides for whom He wills without account.'",
+        "imagePrompt": "An elderly man talking to a young girl in a simple, quiet room with baskets of fruit",
       },
       {
-        "text": "Zakariya and his wife were very old and had no children. He prayed to Allah for a child who would continue his work. Even though he was old, he never lost hope in Allah's power.",
-        "imagePrompt": "elderly couple praying"
+        "text": "Seeing the miracles given to Maryam, Zakariyah (AS) prayed to Allah for a son, even though he was very old and his wife was also elderly. He prayed privately: 'My Lord, indeed my bones have weakened... and never have I been in my prayer to You, my Lord, unhappy.' He wanted a son to carry on the light of prophethood.",
+        "imagePrompt": "A silhouette of an old man with white hair, praying alone in a beautiful temple",
       },
       {
-        "text": "Allah answered his prayer! The angels told Zakariya he would have a son named Yahya (John). Zakariya was amazed and asked, 'How can I have a son when I am so old?'",
-        "imagePrompt": "angel bringing news"
+        "text": "While he was standing in prayer, the angels called out to him: 'Allah gives you good tidings of Yahya (John), who will confirm a word from Allah and be a leader, chaste, and a prophet from among the righteous.' Zakariyah (AS) was amazed and asked how this could be, and Allah replied: 'It is easy for Me.'",
+        "imagePrompt": "A glowing light appearing before a man who is standing in a grand hall",
       },
       {
-        "text": "The angel said, 'Allah does what He wills.' To help Zakariya believe, the angel made him unable to speak for three days as a sign. Zakariya came out of the temple and communicated with signs.",
-        "imagePrompt": "unable to speak as sign"
+        "text": "Allah gave Zakariyah (AS) a sign: he would not be able to speak to people for three days except by gestures. During this time, he was filled with joy and kept praising Allah in his heart. Soon, the miracle came true, and they were blessed with a beautiful baby boy named Yahya (AS).",
+        "imagePrompt": "A happy old man looking out at a group of people and gesturing with his hands",
       },
       {
-        "text": "True to Allah's promise, Zakariya's wife became pregnant and gave birth to a beautiful baby boy named Yahya. Zakariya's speech returned, and he praised Allah for this wonderful blessing.",
-        "imagePrompt": "newborn baby blessing"
-      },
-      {
-        "text": "Yahya grew up to be a great prophet who called people to repent and prepare for the coming of Isa. Zakariya was so happy to see his son serving Allah.",
-        "imagePrompt": "son serving Allah"
+        "text": "Zakariyah (AS) lived to see his son Yahya grow up to be a wise and noble prophet who also loved and served Allah. Zakariyah's life shows us that no matter how old we are or how impossible things look, we should never stop asking Allah for what we need.",
+        "imagePrompt": "An elderly father and a young son walking together in a green valley",
       }
     ],
     "lessons": [
-      "Never lose hope in Allah's mercy",
-      "Allah can do anything - even the impossible",
-      "Pray sincerely and Allah will answer",
-      "Children who serve Allah are a great blessing",
-      "Trust in Allah's timing"
+      "Always have high hopes in Allah, no matter how 'impossible' the situation seems",
+      "The miracles given to others (like Maryam) should inspire us to pray for ourselves",
+      "Allah's power is shown when He gives us blessings at the perfect time",
+      "A righteous child is one of the greatest gifts a parent can receive",
+      "Sincere and private prayer (Dua) is a powerful way to talk to our Creator"
     ],
     "quiz": [
       {
@@ -2055,38 +1934,37 @@ export const prophets: ProphetStory[] = [
     "id": 23,
     "name": "Prophet Yahya (AS)",
     "arabicName": "يحيى",
-    "emoji": "🕊️",
     "color": "#06B6D4",
     "bgGradient": "from-cyan-400 to-blue-500",
     "shortDescription": "The prophet who was gentle and never disobeyed his parents",
     "story": [
       {
-        "text": "Prophet Yahya (John the Baptist) was the son of Prophet Zakariya. He was born miraculously when his parents were very old. Allah made him wise and gentle from childhood.",
-        "imagePrompt": "miraculous baby"
+        "text": "Prophet Yahya (AS) was the son of Prophet Zakariyah (AS), given as a miracle in his parents' old age. From his childhood, Yahya (AS) was unlike other children. When other boys asked him to play, he would wisely say: 'We were not created for play.' He was serious, pure, and deeply devoted to worshipping Allah even as a small boy.",
+        "imagePrompt": "A young child with a calm, wise face sitting under a tree and looking at a scroll",
       },
       {
-        "text": "Yahya was known for being very kind and gentle. He never disobeyed his parents and was always respectful. He was also very humble and never sought power or wealth.",
-        "imagePrompt": "gentle and respectful"
+        "text": "Allah gave Yahya (AS) 'Hukm' (wisdom and prophethood) while he was still a child. He was famous for his amazing kindness, especially toward his parents. The Quran describes him as being 'kind to his parents, and he was not a tyrant or rebellious.' He never once spoke a harsh word to them.",
+        "imagePrompt": "A young man kissing the hand of his elderly father in a warm, sunlit room",
       },
       {
-        "text": "Allah gave Yahya wisdom even as a child. He would spend time in prayer and fasting. He called people to repent and prepare for the coming of Prophet Isa.",
-        "imagePrompt": "young prophet teaching"
+        "text": "Yahya (AS) lived a very simple life. He often spent his time in the wilderness, eating only leaves and honey, so that he could focus entirely on his love for Allah. He would weep out of fear and love for his Creator, often calling the people to repent and turn back to the right path before they lost their way.",
+        "imagePrompt": "A man in simple clothing standing in a rocky desert under a vast, starry sky",
       },
       {
-        "text": "Yahya was brave and spoke the truth even to powerful people. When a king wanted to marry a woman he wasn't allowed to marry, Yahya told him it was wrong, even though it was dangerous.",
-        "imagePrompt": "speaking truth to king"
+        "text": "He was a very brave prophet who never feared the blame of anyone when it came to the truth. He stood up against a powerful, corrupt king who wanted to break the laws of Allah. Yahya (AS) told him clearly: 'It is not lawful for you.' He chose to follow Allah's command even though it was very dangerous.",
+        "imagePrompt": "A man with a firm, calm face speaking to a king who looks angry on a throne",
       },
       {
-        "text": "Because of his truthfulness, Yahya was martyred. But he is honored in heaven and remembered as a great prophet who always stood for what was right.",
-        "imagePrompt": "honored in heaven"
+        "text": "Ibn Kathir mentions that Yahya (AS) and Isa (AS) were cousins and often worked together to guide the people. Yahya (AS) was martyred for his courage, but he earned the highest honor from Allah. He is the only prophet whose name was chosen directly by Allah Himself: 'We give you good tidings of a boy whose name will be Yahya.'",
+        "imagePrompt": "Two noble men talking together in a peaceful, green garden",
       }
     ],
     "lessons": [
-      "Always be kind and gentle",
-      "Never disobey your parents",
-      "Speak the truth even when it's difficult",
-      "Humility is a great virtue",
-      "Stand up for what is right"
+      "True wisdom and devotion can begin at a very young age (like Yahya)",
+      "Being exceptionally kind and obedient to parents is a prophetic quality",
+      "We should value our time and remember that we weren't 'created for play' alone",
+      "Speaking the truth to power, even when it is dangerous, shows ultimate faith",
+      "A simple life focused on Allah is better than a life of luxury and distraction"
     ],
     "quiz": [
       {
@@ -2128,58 +2006,41 @@ export const prophets: ProphetStory[] = [
     "id": 24,
     "name": "Prophet Isa (AS)",
     "arabicName": "عيسى",
-    "emoji": "👶",
     "color": "#10B981",
     "bgGradient": "from-teal-400 to-emerald-500",
     "shortDescription": "Born miraculously and spoke as a baby, raised the dead by Allah's will",
     "story": [
       {
-        "text": "Maryam was a very special and pious woman who dedicated her life to worshipping Allah. She grew up in the temple under the care of Prophet Zakariya. Allah loved Maryam very much.",
-        "imagePrompt": "pious Maryam worshipping"
+        "text": "Prophet Isa (AS) was born from a great miracle. His mother, Maryam (AS), was a pure and pious woman who was visited by Angel Jibreel. He told her: 'I am only a messenger of your Lord to give you news of a pure boy.' Maryam was amazed, but she trusted Allah. When the time came, she rested under a palm tree, and Allah provided her with fresh dates and a stream of water.",
+        "imagePrompt": "A woman sitting under a large palm tree with a small stream nearby",
       },
       {
-        "text": "One day, while Maryam was alone, Angel Jibreel came to her looking like a handsome man. Maryam was scared and said, 'I seek refuge with Allah from you!'",
-        "imagePrompt": "angel appearing to Maryam"
+        "text": "When Maryam (AS) returned to her people with the baby, they were shocked and asked questions. Maryam remained silent as Allah commanded. Suddenly, baby Isa (AS) spoke from his cradle: 'Indeed, I am the servant of Allah. He has given me the Scripture and made me a prophet.' This was his first miracle, proving his mother's purity.",
+        "imagePrompt": "A baby in a simple wooden cradle, while a group of people look on in shock",
       },
       {
-        "text": "The angel said, 'I am a messenger from Allah bringing good news of a son named Isa. He will be honored and among those close to Allah.' Maryam asked, 'How can I have a son when no man has touched me?'",
-        "imagePrompt": "miraculous announcement"
+        "text": "As Isa (AS) grew up, Allah gave him amazing miracles to show the people the truth. By Allah's permission, he could breathe life into birds made of clay, heal the blind, cure the skin of the leper, and even bring the dead back to life! He always told the people: 'These are by the permission of Allah, so worship Him alone.'",
+        "imagePrompt": "A man's hands holding a small clay bird that is starting to flap its wings",
       },
       {
-        "text": "The angel replied, 'Allah says it is easy for Him. He will make Isa a sign and a mercy.' By Allah's power alone, Maryam became pregnant with Prophet Isa!",
-        "imagePrompt": "divine miracle"
+        "text": "Isa (AS) was given the Injeel (Gospel) and traveled throughout the land, teaching people to be humble, kind, and to love one another. He had twelve close followers called the 'Hawariyyun' (Disciples) who helped him share the message of Allah. He told his people: 'Allah is my Lord and your Lord, so worship Him. That is a straight path.'",
+        "imagePrompt": "A man surrounded by a small group of friends in a simple village market",
       },
       {
-        "text": "When it was time for the baby, Maryam went to a quiet place. Allah made a stream flow and told her to shake a palm tree for fresh dates. After Isa was born, something amazing happened!",
-        "imagePrompt": "palm tree with dates"
+        "text": "When some people plotted to harm Isa (AS), Allah protected him in a miraculous way. He was not killed or crucified; instead, Allah raised him up to heaven where he is still alive today. Someone else was made to look like him, and the enemies were confused. Isa (AS) is one of the five greatest prophets of Islam.",
+        "imagePrompt": "Light shining down from an open sky onto a mountaintop",
       },
       {
-        "text": "Baby Isa spoke from his cradle! He said, 'I am a servant of Allah. He gave me the Book and made me a prophet. He made me blessed wherever I am.' Everyone was shocked!",
-        "imagePrompt": "baby speaking from cradle"
-      },
-      {
-        "text": "Isa grew up to be a wise prophet. Allah gave him many miracles - he could heal the sick, make the blind see, and even bring dead people back to life - all by Allah's power and permission!",
-        "imagePrompt": "healing miracles"
-      },
-      {
-        "text": "Isa taught people to worship only Allah. He said, 'Allah is my Lord and your Lord, so worship Him alone.' He also taught kindness, helping the poor, and loving one another.",
-        "imagePrompt": "teaching worship"
-      },
-      {
-        "text": "Some people plotted to kill Isa, but Allah had a different plan! Allah raised Isa up to heaven while he was still alive. Someone else was made to look like him, and the enemies thought they had killed him.",
-        "imagePrompt": "ascending to heaven"
-      },
-      {
-        "text": "Muslims believe Isa will return before the Day of Judgment. He will establish justice and peace, and prove that he was always a prophet of Allah, not God or son of God. He is called Al-Masih (the Messiah).",
-        "imagePrompt": "future return"
+        "text": "Muslims believe that Isa (AS) will return to earth before the Day of Judgment to establish peace and justice. He will show everyone the truth of Islam and live as a just leader. His return is one of the major signs of the Hour, and it will be a time of great victory for the believers.",
+        "imagePrompt": "A peaceful landscape with a white minaret under a clear, bright sky",
       }
     ],
     "lessons": [
-      "Allah can do anything - even make a baby speak!",
-      "Trust Allah even in difficult times",
-      "Always speak the truth like baby Isa did",
-      "Be kind and help those in need",
-      "Worship only Allah, not anyone else"
+      "Allah can create whatever He wills, just as He created Isa without a father",
+      "True miracles are a sign from Allah to bring people back to the Straight Path",
+      "Patience and trust in Allah (like Maryam) lead to victory over false accusations",
+      "Prophets are human servants of Allah, not Gods or children of God",
+      "Doing good deeds and helping others is the best way to show our love for Allah"
     ],
     "quiz": [
       {
@@ -2241,68 +2102,43 @@ export const prophets: ProphetStory[] = [
   },
   {
     "id": 25,
-    "name": "Prophet Muhammad (SAW)",
+    "name": "Prophet Muhammad ﷺ",
     "arabicName": "محمد",
-    "emoji": "☪️",
     "color": "#14B8A6",
     "bgGradient": "from-teal-500 to-cyan-600",
     "shortDescription": "The final messenger who brought the Quran, mercy to all worlds",
     "story": [
       {
-        "text": "Prophet Muhammad (Peace Be Upon Him) was born in Makkah over 1400 years ago. His father died before he was born, and his mother died when he was six. His grandfather and then his uncle Abu Talib raised him.",
-        "imagePrompt": "baby in Makkah"
+        "text": "Prophet Muhammad ﷺ was born in Makkah into the noble tribe of Quraysh. He was orphaned at a young age and raised by his grandfather, Abdul Muttalib, and later his uncle, Abu Talib. Even as a young man, he was known by everyone in Makkah as 'Al-Amin' (The Trustworthy) because he never once told a lie and was always fair in his dealings.",
+        "imagePrompt": "A young man with a noble expression standing in a busy desert city, with people walking by",
       },
       {
-        "text": "Muhammad grew up to be known as 'Al-Amin' - The Trustworthy. Everyone trusted him because he was always honest, kind, and fair. People brought their problems to him because they knew he would be just.",
-        "imagePrompt": "trustworthy young man"
+        "text": "At the age of 40, while he was meditating in the Cave of Hira, Angel Jibreel appeared and brought the first revelation of the Quran: 'Read in the name of your Lord who created.' This marked the beginning of his mission as the final Prophet to all of mankind. His wife Khadijah (RA) was the first to believe and support him.",
+        "imagePrompt": "A dark, rocky cave entrance with a soft, glowing light shining from within",
       },
       {
-        "text": "Muhammad would go to a cave called Hira to think and pray. He wanted to understand life's purpose and worship Allah correctly. When he was 40, something amazing happened!",
-        "imagePrompt": "cave of Hira"
+        "text": "For thirteen years in Makkah, the Prophet ﷺ called people to worship Allah alone and to treat everyone with equality and justice. Despite facing great hardship and being mocked by the leaders of Quraysh, he remained patient and kind. He once said: 'I was only sent to perfect noble character.'",
+        "imagePrompt": "A man standing calmly while a group of angry people gesture toward him in a dusty street",
       },
       {
-        "text": "Angel Jibreel came to him and said, 'Read!' Muhammad said, 'I cannot read.' The angel hugged him tightly and said again, 'Read!' After three times, the angel recited the first verses of the Quran!",
-        "imagePrompt": "first revelation"
+        "text": "Eventually, Allah commanded the Muslims to migrate to Madinah—this event is called the Hijrah. In Madinah, the Prophet ﷺ built the first mosque and established a community of peace and brotherhood between the migrants and the local people. He showed that people of different backgrounds could live together in harmony under the law of Allah.",
+        "imagePrompt": "A group of people working together to lay simple stone blocks for a building under a date palm tree",
       },
       {
-        "text": "Muhammad was scared and ran to his wife Khadijah. She comforted him and was the first to believe. She said, 'Allah will never let you down. You are kind to family and help the poor.'",
-        "imagePrompt": "Khadijah comforting"
+        "text": "After many years, the Prophet ﷺ returned to Makkah with a massive, peaceful army. Instead of taking revenge on those who had hurt him, he showed ultimate mercy and declared: 'Go, for you are free.' Thousands of people entered Islam after seeing his incredible character and the truth of his message.",
+        "imagePrompt": "A massive group of people in white clothing standing peacefully before a grand city gate",
       },
       {
-        "text": "Slowly, more people believed - Abu Bakr, Ali, and others. But Makkah's leaders didn't like this message of equality. They started hurting the Muslims, throwing trash on the Prophet and even killing some.",
-        "imagePrompt": "early persecution"
-      },
-      {
-        "text": "Allah commanded the Muslims to move to Madinah. This journey, called the Hijrah, marks the Islamic calendar's beginning. In Madinah, the Prophet built the first mosque and established peace.",
-        "imagePrompt": "journey to Madinah"
-      },
-      {
-        "text": "Different religions lived together peacefully under the Prophet's leadership. He made treaties protecting everyone's rights, showing Islam is a religion of peace and justice.",
-        "imagePrompt": "peaceful community"
-      },
-      {
-        "text": "Makkah attacked the Muslims many times, but Allah helped them defend themselves. Eventually, the Prophet returned with 10,000 followers. The people expected punishment, but he said, 'Go, you are free.'",
-        "imagePrompt": "conquest with mercy"
-      },
-      {
-        "text": "The Prophet performed his only Hajj, teaching Muslims how to do it. In his Farewell Sermon, he said, 'All people are equal. No Arab is better than a non-Arab, no white better than black.'",
-        "imagePrompt": "farewell sermon"
-      },
-      {
-        "text": "The Prophet received the complete Quran over 23 years. It is Allah's final book, protected forever. He is called 'Rahmatul lil Alameen' - a mercy to all worlds including humans, animals, and everything!",
-        "imagePrompt": "complete Quran"
-      },
-      {
-        "text": "Prophet Muhammad (SAW) is the last and final prophet. No prophet will come after him. He is the best example for all Muslims. We love him most and say 'Sallallahu Alayhi Wasallam' - Peace and blessings be upon him!",
-        "imagePrompt": "final prophet"
+        "text": "The Prophet ﷺ performed his Farewell Hajj, where he delivered his famous sermon: 'All mankind is from Adam and Hawwa. An Arab has no superiority over a non-Arab... except by piety and good action.' He completed the mission of all the prophets before him. He is the 'Seal of the Prophets,' and his message, the Quran, is preserved forever as a light for all worlds.",
+        "imagePrompt": "A bright, clear sky over a massive, peaceful gathering of people in a vast desert plain",
       }
     ],
     "lessons": [
-      "Always be honest and trustworthy",
-      "Be patient even when people are mean to you",
-      "Forgive others and be kind",
-      "All people are equal in Allah's sight",
-      "Follow the Prophet's example in everything"
+      "Honesty and being 'Al-Amin' should be our identity before everything else",
+      "Patience (Sabr) and noble character are the most powerful ways to share the truth",
+      "All people are equal in the sight of Allah, regardless of where they are from",
+      "Mercy and forgiveness towards those who hurt us is the way of the Prophet ﷺ",
+      "The Quran and the example (Sunnah) of the Prophet ﷺ are our guides for a happy life"
     ],
     "quiz": [
       {

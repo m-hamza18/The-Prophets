@@ -2,6 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Smooth scrolling for the entire app */
+* {
+  -webkit-overflow-scrolling: touch;
+  /* iOS momentum scrolling */
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overscroll-behavior-y: contain;
+  /* Prevent pull-to-refresh on mobile */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth scrolling for all scrollable containers */
+#root {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  will-change: scroll-position;
+}
+
+/* Optimize touch interactions */
+button,
+a,
+[role="button"] {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  cursor: pointer;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -69,6 +103,7 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }

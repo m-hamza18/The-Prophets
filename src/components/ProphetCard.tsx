@@ -11,39 +11,40 @@ interface ProphetCardProps {
   index: number;
 }
 
-export function ProphetCard({ 
-  prophet, 
-  isLocked, 
-  isCompleted, 
-  score, 
-  onClick, 
-  index 
+export function ProphetCard({
+  prophet,
+  isLocked,
+  isCompleted,
+  score,
+  onClick,
+  index
 }: ProphetCardProps) {
   return (
     <motion.button
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ 
-        duration: 0.5, 
-        delay: index * 0.15,
+      transition={{
+        duration: 0.4,
+        delay: index * 0.05,
         type: "spring",
-        stiffness: 100
+        stiffness: 100,
+        damping: 20
       }}
-      whileHover={!isLocked ? { 
-        scale: 1.05,
-        y: -5,
+      whileHover={!isLocked ? {
+        scale: 1.02,
+        y: -2,
       } : {}}
       whileTap={!isLocked ? { scale: 0.98 } : {}}
       onClick={!isLocked ? onClick : undefined}
       disabled={isLocked}
       className={`
         relative overflow-hidden rounded-3xl p-6
-        ${isLocked 
-          ? 'bg-gray-800/50 border-2 border-gray-600/50 cursor-not-allowed' 
+        ${isLocked
+          ? 'bg-gray-800/50 border-2 border-gray-600/50 cursor-not-allowed'
           : `bg-gradient-to-br ${prophet.bgGradient} border-2 border-white/30 cursor-pointer`
         }
         shadow-lg transition-all duration-300
-        group
+        group will-change-transform
       `}
     >
       {/* Status Badge */}
@@ -73,21 +74,7 @@ export function ProphetCard({
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center text-center">
-        {/* Emoji */}
-        <motion.div
-          className="text-7xl mb-4"
-          animate={!isLocked ? {
-            y: [0, -8, 0],
-            rotate: [0, 5, -5, 0],
-          } : {}}
-          transition={{
-            duration: 3,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        >
-          {prophet.emoji}
-        </motion.div>
+        <div className="h-4" />
 
         {/* Arabic Name */}
         <p className={`text-2xl font-bold mb-1 ${isLocked ? 'text-gray-500' : 'text-white/90'}`}>
@@ -126,7 +113,7 @@ export function ProphetCard({
 
       {/* Shine Effect */}
       {!isLocked && (
-        <div 
+        <div
           className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent
                      -translate-x-full group-hover:translate-x-full transition-transform duration-1000"
         />

@@ -53,34 +53,20 @@ export function ResponseCard({ mood, onReset }: ResponseCardProps) {
       className="w-full max-w-2xl mx-auto"
     >
       {/* Mood Header */}
-      <motion.div 
+      <motion.div
         className={`text-center mb-8 bg-gradient-to-r ${mood.bgGradient} rounded-3xl p-8 shadow-2xl`}
         initial={{ y: -20 }}
         animate={{ y: 0 }}
         transition={{ delay: 0.2 }}
       >
-        <motion.span 
-          className="text-8xl block mb-4"
-          initial={{ scale: 1, rotate: 0 }}
-          animate={{ 
-            scale: [1, 1.1, 1],
-            rotate: [0, 5, -5, 0]
-          }}
-          transition={{
-            duration: 2,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        >
-          {mood.emoji}
-        </motion.span>
+        <div className="h-4" />
         <h2 className="text-3xl font-bold text-white mb-2">{mood.name}</h2>
         <p className="text-white/80">{mood.description}</p>
       </motion.div>
 
       {/* Action Buttons */}
       {!responseType && (
-        <motion.div 
+        <motion.div
           className="grid grid-cols-2 gap-4 mb-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -133,7 +119,7 @@ export function ResponseCard({ mood, onReset }: ResponseCardProps) {
           >
             {/* Decorative background */}
             <div className={`absolute -inset-4 bg-gradient-to-r ${mood.bgGradient} opacity-20 blur-2xl rounded-3xl`} />
-            
+
             <div className="relative bg-white/90 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/50">
               {/* Type indicator */}
               <div className="flex items-center justify-center gap-2 mb-6">
@@ -151,7 +137,7 @@ export function ResponseCard({ mood, onReset }: ResponseCardProps) {
               </div>
 
               {/* Content */}
-              <motion.p 
+              <motion.p
                 className="text-2xl md:text-3xl text-center font-medium text-gray-800 leading-relaxed mb-8"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}

@@ -1,4 +1,8 @@
 import { useState, useEffect, useCallback } from 'react';
+import { useAuth } from '@/contexts/AuthContext';
+import { db } from '@/lib/firebase';
+import { doc, getDoc, setDoc } from 'firebase/firestore';
+import { prophets } from '@/data/prophets';
 
 export interface Progress {
   completedStories: number[];
@@ -9,6 +13,7 @@ export interface Progress {
 const STORAGE_KEY = 'prophet-stories-progress';
 
 export function useProgress() {
+  const { user } = useAuth();
   const [progress, setProgress] = useState<Progress>({
     completedStories: [],
     quizScores: {},
@@ -16,26 +21,66 @@ export function useProgress() {
   });
   const [isLoaded, setIsLoaded] = useState(false);
 
-  // Load progress from localStorage on mount
+  // Load progress from Firestore or localStorage on mount/user change
   useEffect(() => {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    if (saved) {
-      try {
-        const parsed = JSON.parse(saved);
-        setProgress(parsed);
-      } catch (e) {
-        console.error('Failed to parse progress:', e);
-      }
-    }
-    setIsLoaded(true);
-  }, []);
+    async function loadProgress() {
+      setIsLoaded(false);
+      let loadedProgress: Progress | null = null;
 
-  // Save progress to localStorage whenever it changes
+      if (user) {
+        // Try to load from Firestore
+        try {
+          const docRef = doc(db, "users", user.uid);
+          const docSnap = await getDoc(docRef);
+          if (docSnap.exists()) {
+            loadedProgress = docSnap.data() as Progress;
+          }
+        } catch (e) {
+          console.error("Error loading from Firestore:", e);
+        }
+      }
+
+      // Fallback to localStorage or combine if needed
+      if (!loadedProgress) {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved) {
+          try {
+            const parsed = JSON.parse(saved);
+            loadedProgress = parsed;
+          } catch (e) {
+            console.error('Failed to parse local progress:', e);
+          }
+        }
+      }
+
+      if (loadedProgress) {
+        setProgress(loadedProgress);
+      }
+      setIsLoaded(true);
+    }
+
+    loadProgress();
+  }, [user]);
+
+  // Save progress to Firestore/localStorage whenever it changes
   useEffect(() => {
     if (isLoaded) {
+      // Save locally
       localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+
+      // Save to Cloud if logged in
+      if (user) {
+        const saveToCloud = async () => {
+          try {
+            await setDoc(doc(db, "users", user.uid), progress);
+          } catch (e) {
+            console.error("Error saving to Firestore:", e);
+          }
+        };
+        saveToCloud();
+      }
     }
-  }, [progress, isLoaded]);
+  }, [progress, isLoaded, user]);
 
   const completeStory = useCallback((storyId: number, score: number) => {
     setProgress(prev => ({
@@ -53,11 +98,12 @@ export function useProgress() {
   }, []);
 
   const resetProgress = useCallback(() => {
-    setProgress({
+    const newProgress = {
       completedStories: [],
       quizScores: {},
       currentStory: 1,
-    });
+    };
+    setProgress(newProgress);
   }, []);
 
   const isStoryCompleted = useCallback((storyId: number) => {
@@ -74,7 +120,7 @@ export function useProgress() {
   }, [progress.completedStories]);
 
   const getOverallProgress = useCallback(() => {
-    const totalStories = 6;
+    const totalStories = prophets.length;
     return Math.round((progress.completedStories.length / totalStories) * 100);
   }, [progress.completedStories]);
 

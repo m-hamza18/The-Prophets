@@ -24,16 +24,16 @@ export function Quiz({ prophet, onComplete, onBack }: QuizProps) {
 
   const handleAnswer = (answerIndex: number) => {
     if (showResult) return;
-    
+
     setSelectedAnswer(answerIndex);
     const correct = answerIndex === question.correctAnswer;
     setIsCorrect(correct);
     setShowResult(true);
-    
+
     if (correct) {
       setScore(prev => prev + 1);
     }
-    
+
     setAnsweredQuestions(prev => [...prev, currentQuestion]);
   };
 
@@ -101,11 +101,10 @@ export function Quiz({ prophet, onComplete, onBack }: QuizProps) {
                 transition={{ delay: 0.3 + i * 0.1, type: "spring" }}
               >
                 <Star
-                  className={`w-12 h-12 ${
-                    i < finalScore
+                  className={`w-12 h-12 ${i < finalScore
                       ? 'text-yellow-300 fill-yellow-300'
                       : 'text-white/30'
-                  }`}
+                    }`}
                 />
               </motion.div>
             ))}
@@ -126,6 +125,19 @@ export function Quiz({ prophet, onComplete, onBack }: QuizProps) {
             >
               Continue
               <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
+          </div>
+
+          <div className="mt-6">
+            <Button
+              onClick={() => {
+                const text = `I just scored ${finalScore}/${prophet.quiz.length} on the ${prophet.name} quiz! Check out this amazing app: https://m-hamza18.github.io/The-Prophets/`;
+                window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+              }}
+              variant="ghost"
+              className="text-white/60 hover:text-white hover:bg-white/10"
+            >
+              Share score on WhatsApp 🟢
             </Button>
           </div>
         </div>
@@ -233,9 +245,8 @@ export function Quiz({ prophet, onComplete, onBack }: QuizProps) {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className={`mt-6 p-5 rounded-2xl ${
-                  isCorrect ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
-                }`}
+                className={`mt-6 p-5 rounded-2xl ${isCorrect ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
+                  }`}
               >
                 <p className="text-lg font-bold flex items-center gap-2">
                   {isCorrect ? (

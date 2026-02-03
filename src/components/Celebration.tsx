@@ -31,7 +31,7 @@ export function Celebration({ onRestart }: CelebrationProps) {
               ease: "linear",
             }}
           >
-            {['🎉', '🌟', '✨', '🎊', '⭐'][Math.floor(Math.random() * 5)]}
+            <div className="w-2 h-2 rounded-full bg-white/40" />
           </motion.div>
         ))}
       </div>
@@ -47,9 +47,10 @@ export function Celebration({ onRestart }: CelebrationProps) {
           initial={{ scale: 0, rotate: -180 }}
           animate={{ scale: 1, rotate: 0 }}
           transition={{ delay: 0.3, type: "spring", stiffness: 200 }}
-          className="text-9xl mb-8"
         >
-          🏆
+          <div className="bg-white/20 rounded-full p-10 backdrop-blur-md">
+            <Star className="w-32 h-32 text-yellow-300 fill-yellow-300" />
+          </div>
         </motion.div>
 
         <motion.h1
@@ -76,7 +77,7 @@ export function Celebration({ onRestart }: CelebrationProps) {
           transition={{ delay: 0.9 }}
           className="text-lg text-white/70 mb-8 max-w-xl mx-auto"
         >
-          You have learned about 6 amazing prophets and their beautiful stories. 
+          You have learned about all the amazing prophets and their beautiful stories.
           May Allah bless you with knowledge and understanding!
         </motion.p>
 

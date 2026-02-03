@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { type ProphetStory } from '@/data/prophets';
 import { Button } from '@/components/ui/button';
-import { ChevronLeft, ChevronRight, BookOpen, Lightbulb, Sparkles } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Lightbulb, Sparkles } from 'lucide-react';
 
 interface StoryViewerProps {
   prophet: ProphetStory;
@@ -34,10 +34,16 @@ export function StoryViewer({ prophet, onComplete, onBack }: StoryViewerProps) {
     onComplete();
   };
 
-  // Generate image URL based on prophet id and page
+  // Generate image URL based on prophet name
   const getImageUrl = () => {
-    const prophetKey = prophet.name.toLowerCase().replace(/[^a-z]/g, '').replace('prophet', '');
-    return `/images/prophets/${prophetKey}-${currentPage + 1}.jpg`;
+    const nameWithoutSuffix = prophet.name.toLowerCase()
+      .replace(' (as)', '')
+      .replace(' (saw)', '')
+      .replace('prophet', '')
+      .trim();
+    const prophetKey = nameWithoutSuffix.replace(/[^a-z]/g, '');
+    const base = import.meta.env.BASE_URL;
+    return `${base}images/prophets/${prophetKey}-1.jpg`;
   };
 
   if (showLessons) {
@@ -55,7 +61,7 @@ export function StoryViewer({ prophet, onComplete, onBack }: StoryViewerProps) {
               transition={{ type: "spring", stiffness: 200 }}
               className="text-6xl mb-4"
             >
-              🌟
+              <Sparkles className="w-12 h-12 text-yellow-300 mx-auto" />
             </motion.div>
             <h2 className="text-3xl font-bold text-white mb-2">Lessons from {prophet.name}</h2>
             <p className="text-white/80">What can we learn from this story?</p>
@@ -117,79 +123,89 @@ export function StoryViewer({ prophet, onComplete, onBack }: StoryViewerProps) {
             Back
           </button>
           <div className="text-center">
-            <span className="text-4xl mr-2">{prophet.emoji}</span>
             <span className="text-2xl font-bold text-white">{prophet.arabicName}</span>
           </div>
           <div className="w-20" />
         </div>
       </div>
 
-      {/* Story Card with Image */}
-      <div className="bg-white/95 backdrop-blur-xl rounded-3xl overflow-hidden shadow-2xl border border-white/50 mb-6">
-        {/* Image Section */}
-        <div className="relative h-64 md:h-80 overflow-hidden">
-          <img
-            src={getImageUrl()}
-            alt={`Illustration for ${prophet.name} story`}
-            className="w-full h-full object-cover"
-            onError={(e) => {
-              // Fallback to a gradient background if image fails to load
-              const target = e.target as HTMLImageElement;
-              target.style.display = 'none';
-              const parent = target.parentElement;
-              if (parent) {
-                parent.className = `h-64 md:h-80 bg-gradient-to-br ${prophet.bgGradient} flex items-center justify-center`;
-                const emoji = document.createElement('span');
-                emoji.className = 'text-8xl';
-                emoji.textContent = prophet.emoji;
-                parent.appendChild(emoji);
-              }
-            }}
-          />
-          {/* Text Overlay on Image */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end">
-            <div className="p-6 w-full">
-              <span className="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm mb-2">
-                Part {currentPage + 1} of {totalPages}
+      {/* Immersive Story Card */}
+      <div className="relative min-h-[450px] md:min-h-[600px] w-full bg-black rounded-3xl overflow-hidden shadow-2xl mb-6 group">
+
+        {/* Full Background Image */}
+        <div className="absolute inset-0">
+          <AnimatePresence mode="wait">
+            <motion.img
+              key={currentPage}
+              src={getImageUrl()}
+              alt={`Illustration for ${prophet.name}`}
+              className="w-full h-full object-cover"
+              initial={{ opacity: 0, scale: 1.05 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5 }}
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                target.style.display = 'none';
+                const parent = target.parentElement;
+                if (parent) {
+                  parent.className = `absolute inset-0 bg-gradient-to-br ${prophet.bgGradient} flex items-center justify-center`;
+                  // Fallback to a logo or icon instead of emoji if image fails
+                  if (!parent.querySelector('.fallback-icon')) {
+                    const icon = document.createElement('div');
+                    icon.className = 'fallback-icon text-white/20 transform scale-150';
+                    icon.innerHTML = '<svg viewBox="0 0 24 24" width="100" height="100" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5z"></path><path d="M8 6h9"></path><path d="M8 10h9"></path><path d="M8 14h9"></path></svg>';
+                    parent.appendChild(icon);
+                  }
+                }
+              }}
+            />
+          </AnimatePresence>
+
+          {/* Gradient Overlay for Text Readability */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+        </div>
+
+        {/* Content Overlay */}
+        <div className="absolute inset-0 flex flex-col p-4 md:p-10 pointer-events-none">
+          {/* Spacer to push content down but keep it scrollable if too long */}
+          <div className="flex-grow" />
+
+          {/* Text Card */}
+          <div className="relative z-10">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentPage}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.4 }}
+                className="bg-black/70 backdrop-blur-md border border-white/10 rounded-3xl p-6 shadow-2xl max-h-[75%] overflow-y-auto scrollbar-hide pointer-events-auto"
+              >
+                <p className="text-lg md:text-2xl leading-relaxed text-white font-medium drop-shadow-md pb-2">
+                  {currentSection.text}
+                </p>
+              </motion.div>
+            </AnimatePresence>
+
+            {/* Progress Indicator */}
+            <div className="mt-6 flex items-center justify-between text-white/60 text-sm">
+              <div className="flex gap-1.5">
+                {prophet.story.map((_, index) => (
+                  <div
+                    key={index}
+                    className={`h-1.5 rounded-full transition-all duration-300 ${index === currentPage
+                      ? 'w-8 bg-white'
+                      : 'w-1.5 bg-white/30'
+                      }`}
+                  />
+                ))}
+              </div>
+              <span className="bg-black/30 px-3 py-1 rounded-full backdrop-blur-sm border border-white/10">
+                {currentPage + 1} / {totalPages}
               </span>
             </div>
           </div>
-        </div>
-
-        {/* Progress Bar */}
-        <div className="px-6 pt-4">
-          <div className="flex items-center justify-between text-sm text-gray-500 mb-2">
-            <span className="flex items-center gap-2">
-              <BookOpen className="w-4 h-4" />
-              Story Progress
-            </span>
-            <span>{currentPage + 1} of {totalPages}</span>
-          </div>
-          <div className="h-3 bg-gray-200 rounded-full overflow-hidden">
-            <motion.div
-              className={`h-full bg-gradient-to-r ${prophet.bgGradient}`}
-              initial={{ width: 0 }}
-              animate={{ width: `${((currentPage + 1) / totalPages) * 100}%` }}
-              transition={{ duration: 0.5 }}
-            />
-          </div>
-        </div>
-
-        {/* Story Content */}
-        <div className="p-6">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentPage}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
-            >
-              <p className="text-xl md:text-2xl leading-relaxed text-gray-800 font-medium">
-                {currentSection.text}
-              </p>
-            </motion.div>
-          </AnimatePresence>
         </div>
       </div>
 
@@ -209,13 +225,12 @@ export function StoryViewer({ prophet, onComplete, onBack }: StoryViewerProps) {
           {prophet.story.map((_, index) => (
             <div
               key={index}
-              className={`w-3 h-3 rounded-full transition-colors ${
-                index === currentPage 
-                  ? `bg-gradient-to-r ${prophet.bgGradient}` 
-                  : index < currentPage 
-                    ? 'bg-gray-400' 
-                    : 'bg-gray-200'
-              }`}
+              className={`w-3 h-3 rounded-full transition-colors ${index === currentPage
+                ? `bg-gradient-to-r ${prophet.bgGradient}`
+                : index < currentPage
+                  ? 'bg-gray-400'
+                  : 'bg-gray-200'
+                }`}
             />
           ))}
         </div>
